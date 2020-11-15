@@ -5,7 +5,7 @@
 
 @include('backend.blog.layout.header')
 
-
+ 
   <div class="content-wrapper">
     <section class="content-header">
       <div class="container-fluid">
@@ -48,8 +48,8 @@
                     <tr>
                         <th>#Id</th>
                         <th>Name</th>
-                        <th>Image</th>
-                        <th>Email</th>
+                        <th>Image</th>    
+                        <th>Email</th>   
                         {{-- <th>Permission</th> --}}
                         <th>Action</th>
                       </tr>
@@ -62,15 +62,14 @@
       </div>
     </section>
   </div>
+  
 
-
-
+  
 <div id="fs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
 data-backdrop="static" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <form enctype="multipart/form-data">
-            @method()
           <input  hidden name="id" id="id" value="0" >
             <div class="modal-header">
                 <h5 class="modal-title text-center" id="fs-modal-title"></h5>
@@ -111,7 +110,7 @@ data-backdrop="static" aria-hidden="true">
               </div>
               <div class="container" style="width:150px;height:150px;padding:15px 0;">
                 <img id="showAvatar" src="" alt="" style="width: 100%;height:100%;border-radius:50%" >
-              </div>
+              </div> 
                 <div class="modal-footer">
                     <button type="button" id="btn-save" class="btn btn-warning btn-block"
                         onclick="us.save()">
@@ -130,5 +129,5 @@ data-backdrop="static" aria-hidden="true">
 <script src="{{ asset('js/user.js') }}"></script>
 
 
-
+  
 @endsection
