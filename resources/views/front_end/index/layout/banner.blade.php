@@ -7,7 +7,7 @@
         </div>
 
         <div class="logo">
-            <h1>Legend of L111eague</h1>
+            <h1>Blogger Manager</h1>
         </div>
 
     <div class="header-login">
