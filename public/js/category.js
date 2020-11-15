@@ -51,7 +51,7 @@ Ca.drawTable = function() {
 //                             Ca: ++i,
 //                             Ca1: json.name,
 //                             action: `
-    
+
 //                                 <a class="btn btn-danger text-light btn-sm" onclick="Ca.edit(${json.id})"><i class="fas fa-pencil-alt"></i>Edit</a>
 //                                 <a class="btn btn-warning text-dark btn-sm" onclick="Ca.destroy(${json.id})"><i class='fas fa-trash-alt'></i> Delete</a>
 //                             `
@@ -140,11 +140,11 @@ Ca.save = function(btn) {
                 }
             });
         }
-    }   
+    }
     else {
         if (confirm('Save this data')) {
             $.ajax({
-                url: `/category/post/`,
+                url: `/category/post`,
                 method: 'post',
                 data: data,
                 success: function() {
