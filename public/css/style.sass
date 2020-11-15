@@ -1,0 +1,672 @@
+html,body 
+    margin: 0 
+    padding: 0 
+    box-sizing: border-box
+    font-family: "Cinzel", serif
+    
+ 
+.logo 
+    color: #fff 
+    font-size: 1.7vh
+    letter-spacing: 10px
+    margin-left: 6% 
+    padding: 1px
+
+
+#banner 
+    position: relative
+    width: 100%
+    height: 80vh 
+    background-image: url('../images/hero-1.jpg')
+    background-size: cover
+    background-position: center
+    overflow: hidden
+
+.header-top
+    display: flex
+    width: 100%
+    background-color: #0009
+    justify-content: space-between
+    align-items: center
+    height: 11%
+  
+.header-text
+    position: absolute
+    left: 20%
+    top: 40%
+    letter-spacing: 5px
+    white-space: nowrap
+    font-size: 3vh
+    div
+        color: #fff
+
+.header-text-title
+    font-size: 27px
+    font-weight: 950
+
+.header-text-description
+    line-height: 1.5
+    padding: 20px 0
+    font-size: 3vh
+
+.header-text-description::after 
+    content: "$"
+    color: #f32c2c
+    font-weight: 600
+
+#button-header
+    background-color: #f32c2c
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+    border: none
+    padding: 2% 6%
+    color: #fff
+    font-size: 1.5vh
+    border-radius: 15px
+    font-weight: 600
+    letter-spacing: 2px
+
+header.sticky
+    background: #9e0303 
+    transition: 0.6s
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+    top: 0
+
+
+
+header 
+    position: fixed
+    z-index: 1000
+    top: 70px
+    left: 0
+    display: flex 
+    justify-content: space-around
+    align-items: center
+    background-color: #e44c4c99
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+    width: 100%
+    transition: 1s
+    ul 
+        display: flex
+        transform: skewX(-15deg)
+        li 
+            margin: 0 2px
+            list-style: none    
+            padding: 15px
+        li:hover 
+            background-color: #f72d2d
+        a 
+            text-decoration: none
+            color: white
+
+a 
+    text-decoration: none
+
+
+.baner-all a
+    margin-left: 28%
+    color: #fff 
+    font-size: 31px
+   
+.baner-all a::before 
+        position: absolute
+        height: 18px
+        width: 10px
+        margin-left: -22px
+        margin-top: 8px
+        background: #c20000
+        content: ""
+        transform: skewX(-15deg)
+
+.header-login
+    transform: skewX(-15deg)
+    padding: 15px
+    white-space: nowrap
+    a 
+        color: white
+        background: #000000 
+        padding: 10px
+        text-decoration: none
+        
+#home
+    background-color: #f00909
+      
+.banner-unit
+    display: grid
+    grid-template-columns: auto auto 
+    justify-content: center
+    grid-gap: 2%
+    background-color: #252424
+    padding-left: 2% 
+    .page-blogs-images
+        width: 660px
+        // height: 400px
+        object-fit: cover
+
+.banner-langding
+    display: grid
+    grid-template-columns: 300px 300px
+    grid-gap: 10px
+    padding: 5% 0
+    border-bottom: 0.1px solid #3f3b3b
+    
+
+.banner-one
+    display: none
+
+.trending-category
+    color: white
+
+.trending-input
+    padding: 35px 0
+    
+.trending-input input
+    width: 85%
+    height: 40px
+    background: transparent
+    background-image: url(../images/search.png)
+    background-repeat: no-repeat
+    background-position-y: 60%
+    background-position-x: 98%
+    background-size: 20px
+    padding: 0 15px
+    border-bottom: 2px solid  #501755
+
+
+    
+.banner-input input
+    width: 85%
+    height: 40px
+    background: transparent
+    background-image: url(../images/search.png)
+    background-repeat: no-repeat
+    background-position-y: 60%
+    background-position-x: 98%
+    background-size: 20px
+    padding: 0 15px
+    border-bottom: 2px solid  #501755
+
+.banner-work
+    max-width: 400px
+    
+.banner-image
+    width: 300px
+    object-fit: cover
+    transition: 5s
+
+.banner-image:hover
+    transform: scale(1.06)
+
+.banner-new
+    color: white
+    font-size: 2em
+    font-weight: 450
+    padding: 50px 0 20px
+
+.banner-new::before
+    position: absolute
+    height: 18px
+    width: 10px
+    margin-left: -22px
+    margin-top: 8px
+    background: #c20000
+    content: ""
+    transform: skewX(-15deg)
+
+.button-new 
+    color: white
+    background-color: #373638
+    padding: 2% 5%
+    border: none
+    font-size: 18px
+
+.banner-button
+    padding: 15px 0 60px 
+    button 
+        margin: 0 3px
+
+
+.banner-date
+    color: white
+    padding: 6px 0
+
+.banner-title
+    color: white 
+    padding: 6px 0
+    max-width: 90%
+    font-size: 28px
+    font-weight: 600
+
+.banner-content
+    color: #68647d
+    padding: 6px 0
+    max-height: 40%
+    word-break: break-all
+
+.banner-more
+    padding: 5% 0 3% 
+    border-bottom: 1px solid #f19090
+    max-width: 50%
+    a 
+        text-decoration: none
+        color: #eee
+        i 
+            color: #b01ba5
+
+.trending-image
+    width: 200px
+
+.trending-all
+    padding: 50px 20px 10px  
+    background: #2b2a2a
+    // text-align: center
+
+.trending-p p 
+    color: #68647d
+
+
+.trending-image-cate
+    width: 80px
+    height: 80px
+    object-fit: cover 
+
+
+
+.text-action
+    color: #b01ba5
+
+
+.category-all
+    padding: 35px 0
+
+
+.trending-work
+    word-break: break-all
+    max-width: 190px
+
+
+.banner-trending
+    display: flex
+    padding: 15px 0
+    grid-gap: 3% 
+
+ 
+
+div .trending-title
+    color: white   
+    font-size: 15px
+    white-space: nowrap
+    width: 120px
+    overflow: hidden
+    text-overflow: ellipsis
+
+
+div.trending-title:hover 
+ overflow: visible
+
+
+ 
+
+.trending-date
+    color: white
+    padding: 5px 0
+    white-space: nowrap
+
+
+.banner-content 
+    word-break: break-all
+    
+.trending-icons 
+    color: white
+    // border: 2px solid #1f1c1c
+    background: transparent
+    transform: skewX(-14deg)
+    height: 30px
+    max-width: 100%
+
+.trending-icons i
+    background-color: #4e4c4c
+    padding: 7px 15px 
+
+.trending-like
+    padding: 0 0 15px
+    color: white
+    font-weight: 500
+
+.trending-banner-title
+    padding: 20px 0 10px 
+    color: white
+    font-size: 18px
+    font-weight: 500
+
+.active
+    background-color: #f32b2b
+    transform: skewX(-4.5deg)
+    outline: none
+    box-shadow: 5px 7px #636262 
+
+.banner-action 
+    display: flex
+    grid-gap: 15px
+    padding: 3px 0 0
+
+.items-image
+    width: 320px
+    height: 200px
+    object-fit: cover
+
+
+.page-work
+    max-width: 650px
+    word-break: break-word
+    overflow: hidden
+    .page-title
+        color: #faf6f6
+        font-size: 25px
+        padding: 15px 0
+        span 
+            color: #b01ba5
+    .page-description
+        color: #ddd8d8
+        font-size: 17px
+        line-height: 1.5
+    .page-title-two
+        color: #ddd8d8
+        font-size: 25px
+        padding: 15px 0 0
+        span 
+            color: #b01ba5
+    .page-content
+        color: #ddd8d8 
+        font-size: 17px
+        line-height: 1.5
+        padding: 0 0 15px
+        p 
+            color: #ddd8d8 !important
+            img 
+                width: 100% !important
+            iframe
+                width: 100% !important
+    
+.comment
+    width: 100%
+    background-color: #eee
+    padding: 10px 0 0   
+
+.baner-dev
+    background-color: #1f1d1d
+    padding: 30px 0 35px
+
+center 
+    color: #fff 
+    font-size: 30px
+    font-weight: 400
+
+
+.swiper-title
+   font-size: 15px
+   color: #fff
+   font-weight: 400
+   padding: 5px 
+   letter-spacing: 3px
+
+.swiper-description
+    color: #e21313
+    font-size: 30px
+    padding: 5px
+
+
+.ul-title
+    display: flex
+    padding: 0 30px
+    li a:after
+        content: "/"
+        color: #444444
+        font-size: 20px
+        margin-left: 35px
+        
+
+.ul-title-one:before
+    position: absolute
+    height: 15px
+    width: 8px
+    top: 20px
+    background: #c20000
+    content: ""
+    transform: skewX(-15deg)
+ 
+
+.title-down
+    max-width: 100%
+    max-height: 30%
+    word-break: break-all
+    word-wrap: break-word
+    padding: 10px 0
+    line-height: 1.2
+    font-size: 20px
+    font-weight: 600
+
+
+
+.dropdown-1
+    position: absolute
+    flex-direction: column
+    transform: skewX(15deg)
+    display: none
+    top: 50px
+    right: -55%
+    div 
+        background-color: #000
+
+.dropdown:hover .dropdown-1
+    display: block
+
+.dropdown-grid
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    padding: 0 10px
+    div li img 
+        width: 200px
+        height: 150px
+
+.dropdown-title
+    font-size: 15px
+    padding: 10px 0
+
+.dropdown-data
+    font-size: 15px
+    
+
+.dropdown-1 
+    color: #fff
+
+
+.dropdown-1 li:hover .dropdown-2
+    display: block
+
+.dropdown-2
+    position: absolute
+    left: 93.4%
+    width: 150px
+    display: none
+    transform: skewX(0deg)
+    
+.ul-enty
+    color: #fff
+    align-items: center
+
+.ul-enty li
+    margin: 0 4px
+
+.form-create
+    background-color: #fff
+
+
+// .menu-reponse
+//     position: fixed
+//     height: 100%
+//     width: 250px
+//     top: 0
+//     background-color: #38383a
+//     z-index: 1000
+//     transition: all 0.6s ease
+//     left: -100%
+//     padding: 7% 0 0
+//     li 
+//         list-style: none
+//         // border-bottom: 1px solid #eee
+//         a 
+//             display: block
+//             padding: 10% 0 0
+//             text-decoration: none
+//             color: #fff
+//             i 
+//                 float: right 
+//                 margin-right: 20px
+
+// .menu-down
+//     padding: 20px 0
+
+// .active
+//     left: 0
+
+// .menu-center
+//     text-align: center
+//     color: #eb2121
+//     font-size: 25px
+    
+
+// .on i.active:before 
+//     content: "\f00d" 
+
+// .sub-menu
+//     display: none
+//     transition: all 0.6s ease
+//     li a
+//         margin: 0 15px
+
+// .menu-border
+//     padding: 15px 
+//     border-bottom: 1px solid #88858544
+//     width: 88%
+    
+// .open i.sub-menu:before 
+//     content: "\f00d" 
+
+footer 
+    background-color: #181717
+
+.footer-page
+    display: grid
+    grid-template-columns: auto auto auto  
+    justify-content: center
+    align-items: center
+    padding: 80px 0
+    grid-gap: 3%
+
+.footer-title
+    color: #fff 
+    font-size: 18px 
+    padding: 18px 0 
+    margin-left: 28px
+    
+    
+.footer-title::before
+    position: absolute
+    margin-left: -22px
+    margin-top: 3px
+    color: #c20000
+    font-size: 40px
+    content: "*"
+    transform: skewX(-15deg)
+
+.footer-name
+    color: #b01ba5
+    padding: 10px 0
+    font-size: 18px
+
+.footer-description
+    color: #dad8d8 
+    font-size: 15px
+    padding: 10px 0 
+    i 
+        color: #b01ba5
+
+.footer-admin
+    color: #dad8d8
+    font-size: 15px 
+    i 
+        color: #b01ba5
+
+.menu 
+    display: none
+
+.paddingnew
+    padding: 20px 0
+
+.banner-like
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #3a3636
+.banner-comment
+    color: #fff
+    font-size: 20px
+    padding: 10px 0
+
+.menu-image
+    margin: 70px 50px
+
+.blog-name:hover 
+    color: red
+
+
+
+@media only screen and ( max-width: 768px  )
+    .banner-unit
+        grid-template-columns: none
+    .header-text
+        left: 8% 
+    footer 
+        padding: 174px 0 0
+        overflow: hidden
+
+    
+@media only screen and ( max-width: 900px  )
+    .banner-langding
+        grid-template-columns: none
+    .ul-enty 
+        .menu-li 
+            display: none 
+        .menu
+            display: block
+            
+    .banner-trending
+        flex-direction: column
+        .trending-image-cate
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .trending-title
+            font-size: 20px
+            width: 100%
+        .trending-date
+            font-size: 20px
+   
+    .banner-image
+        width: 98%
+    .banner-work
+        max-width: 95%
+    .page-work
+        max-width: 97%
+    .footer-page
+        grid-template-columns: auto
+    .banner-unit
+        grid-template-columns: none
+        .page-blogs-images
+          width: 100%
+    .trending-all
+        text-align: center
+
+  
+  
+  
