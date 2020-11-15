@@ -25,7 +25,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name
 Route::get('/test','BlogController@test')->name('blog.index');
 Route::get('/view_index','BlogController@view_index')->name('blog.view_index');
 
-Route::group(['prefix' => 'blog','middleware' => ['auth', 'role:Admin']], function () {
+Route::group(['prefix' => 'blog'], function () {
     Route::get('/view','BlogController@view')->name('blog.view');
     Route::get('/index','BlogController@index')->name('blog.index');
     Route::get('/create','BlogController@create')->name('blog.create');
@@ -39,7 +39,7 @@ Route::group(['prefix' => 'blog','middleware' => ['auth', 'role:Admin']], functi
     Route::get('/category/{id}',"BlogController@searchcate")->name('blog.category');
 });
 
-Route::group(['prefix' => 'category','middleware' => ['auth', 'role:Admin']], function () {
+Route::group(['prefix' => 'category'], function () {
     Route::get('/view','CategoriesController@view')->name('category.view');
     Route::get('/index','CategoriesController@index')->name('category.index');
     Route::get('/create','CategoriesController@create')->name('category.create');
@@ -55,7 +55,7 @@ Route::group(['prefix' => 'category','middleware' => ['auth', 'role:Admin']], fu
 });
 
 
-Route::group(['prefix' => 'user','middleware' => ['auth', 'role:Admin']], function () {
+Route::group(['prefix' => 'user'], function () {
     Route::get('/view','UserController@view')->name('user.view');
     Route::get('/index','UserController@index')->name('user.index');
     Route::get('/create','UserController@create')->name('user.create');
@@ -68,7 +68,7 @@ Route::group(['prefix' => 'user','middleware' => ['auth', 'role:Admin']], functi
 });
 
 
-Route::group(['prefix' => 'role_user','middleware' => ['auth', 'role:Admin']], function () {
+Route::group(['prefix' => 'role_user'], function () {
     Route::get('/view','RoleUserController@view')->name('role_user.view');
     Route::get('/index','RoleUserController@index')->name('role_user.index');
     Route::get('/create','RoleUserController@create')->name('role_user.create');
