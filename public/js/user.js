@@ -99,7 +99,7 @@ us.save = function(){
             usObj.append( 'password', $('#password').val());
             $.ajax({
                 method: "POST",
-                url: "/user/post/",
+                url: "/user/post",
                 processData: false,
                 contentType: false,
                 data: usObj,
@@ -152,7 +152,7 @@ us.destroy = function(id) {
       .then((willDelete) => {
         if (willDelete) {
           $.ajax({
-            url: "/user/delete/"+ id +"/",
+            url: "/user/delete/"+ id,
             method: 'POST',
             success: function() {
                 us.index();

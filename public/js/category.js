@@ -127,7 +127,7 @@ Ca.save = function(btn) {
     if (id) {
         if (confirm('Save change')) {
             $.ajax({
-                url: `/category/put/${id}/`,
+                url: `/category/put/${id}`,
                 method: 'PUT',
                 data: data,
                 success: function(Obj) {
@@ -175,7 +175,7 @@ Ca.destroy = function(id) {
       .then((willDelete) => {
         if (willDelete) {
             $.ajax({
-                url: `/category/delete/${id}/`,
+                url: `/category/delete/${id}`,
                 method: 'delete',
                 success: function(msg) {
                     Ca.table.ajax.reload(null, false);
