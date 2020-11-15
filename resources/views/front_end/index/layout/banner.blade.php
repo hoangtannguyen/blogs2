@@ -5,9 +5,9 @@
         <div class="header-login">
                 {{-- <a href=""><i class="fa fa-bars"></i> Menu</a> --}}
         </div>
-        
+
         <div class="logo">
-            <h1>Legend of League</h1>
+            <h1>Legend of L111eague</h1>
         </div>
 
     <div class="header-login">
@@ -15,7 +15,7 @@
     </div>
 
     </div>
-    
+
 <header>
 
 
@@ -25,13 +25,13 @@
         <li class="dropdown menu-li" ><a href=""> Information </a> <i  class='fa fa-hand-o-down'></i>
             <ul class="dropdown-1">
                 <div class="ul-title ul-title-one">
-                    <li ><a href="">Yone</a></li> 
-                    <li ><a href="">Diana</a></li> 
-                    <li><a href="">Leona</a></li> 
-                    <li><a href="">Hecrim</a></li> 
+                    <li ><a href="">Yone</a></li>
+                    <li ><a href="">Diana</a></li>
+                    <li><a href="">Leona</a></li>
+                    <li><a href="">Hecrim</a></li>
                 </div>
-                <div class="dropdown-grid"> 
-                <div>          
+                <div class="dropdown-grid">
+                <div>
                     <li>
                     <a href="">
                         {{-- <img style="width: 150px" src="{{ Auth::user()->image }}" alt=""> --}}
@@ -40,45 +40,45 @@
                             {{-- {{ Auth::user()->name }} --}}
                         </div>
                         <div class="title-date">
-                          
+
                         </div>
                     </li>
-                </div>   
-                <div>          
+                </div>
+                <div>
                     <li>
                     <a href=""><img style="width: 150px" src="/images/avatar.png" alt=""></a>
                         <div class="title-down">
                             Image You
                         </div>
                         <div class="title-date">
-                          
+
                         </div>
                     </li>
-                </div> 
-                <div>          
+                </div>
+                <div>
                     <li>
                     <a href=""><img style="width: 150px" src="/images/avatar.png" alt=""></a>
                         <div class="title-down">
                             Image You
                         </div>
                         <div class="title-date">
-                          
+
                         </div>
                     </li>
-                </div> 
-                <div>          
+                </div>
+                <div>
                     <li>
                     <a href=""><img style="width: 150px" src="/images/avatar.png" alt=""></a>
                         <div class="title-down">
                             Image You
                         </div>
                         <div class="title-date">
-                          
+
                         </div>
                     </li>
-                </div>     
-                </div>             
-            </ul> 
+                </div>
+                </div>
+            </ul>
         </li>
         <li class="menu-li"><a href="{{ route('UserPost.create') }}">Post Article</a></li>
     </ul>
@@ -87,7 +87,7 @@
 </header>
 
     <div class="header-text">
-        
+
         <div class="header-text-title">
             YOUPLAY
         </div>
@@ -107,7 +107,7 @@
     <div class="menu-center">
         Menu
     </div>
-  
+
     <ul class="menu-down">
         <li class="menu-border">
             <a class="open" href="#">SildeBar <i class="fa fa-caret-down"></i></a>
@@ -116,10 +116,10 @@
                 <li><a href="#">SildeBar</a></li>
                 <li><a href="#">SildeBar</a></li>
             </ul>
-        </li> 
+        </li>
         <li class="menu-border">
             <a href="#">SildeBar</a>
-        </li> 
+        </li>
         <li class="menu-border">
             <a class="open" href="#">SildeBar<i class="fa fa-caret-down"></i></a>
             <ul class="sub-menu">
@@ -127,8 +127,8 @@
                 <li><a href="#">SildeBar</a></li>
                 <li><a href="#">SildeBar</a></li>
             </ul>
-        </li class="menu-border">  
-        <li class="menu-border"><a href="#">SildeBar</a></li> 
+        </li class="menu-border">
+        <li class="menu-border"><a href="#">SildeBar</a></li>
     </ul>
 
     <div class="menu-image">
@@ -138,4 +138,4 @@
 
 
 
-  
+
