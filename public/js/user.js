@@ -23,7 +23,7 @@ us.index = function(){
                         </td>
                         <td>
                                 <a  href="#" class="btn btn-info btn-sm" onclick="us.edit(${value["id"]})">
-                                            <i class="fas fa-pencil-alt"></i>      
+                                            <i class="fas fa-pencil-alt"></i>
                                             Edit
                                 </a>
 
@@ -31,7 +31,7 @@ us.index = function(){
                                             <i class='fas fa-trash-alt'></i>
                                             Delete
                                 </a>
-                        </td>                                       
+                        </td>
                     </tr>
                 `)
             });
@@ -58,7 +58,7 @@ us.create = function(){
         }
     })
 
-
+    $("[name='_method']").val('post');
     $("#fs-modal").modal('show');
     $('#fs-modal form')[0].reset();
     $('#fs-modal #fs-modal-title').text("Create User");
@@ -78,7 +78,9 @@ us.edit = function(id) {
                 if( i != 'image'){
                 $(`#fs-modal input[id=${i}]`).val(v);
             }
-        });    
+        });
+        
+        $("[name='_method']").val('put');
         $('#fs-modal #fs-modal-title').text("Edit User");
         $('#showAvatar').attr('src', Obj.image);
         $('#fs-modal').modal('show');
@@ -101,7 +103,7 @@ us.save = function(){
                 method: "POST",
                 url: "/user/post/",
                 processData: false,
-                contentType: false,              
+                contentType: false,
                 data: usObj,
                 success : function(data){
                     $('#fs-modal').modal("hide");
@@ -124,7 +126,7 @@ us.save = function(){
                 method: "POST",
                 url: "/user/put/" +  usObj.id,
                 processData: false,
-                contentType: false,              
+                contentType: false,
                 data: usObj,
                 success : function(data){
                     $('#fs-modal').modal("hide");
@@ -154,7 +156,7 @@ us.destroy = function(id) {
           $.ajax({
             url: "/user/delete/"+ id +"/",
             method: 'POST',
-            success: function() {   
+            success: function() {
                 us.index();
                 swal("Poof! Your imaginary file has been deleted!", {
                     icon: "success",
@@ -186,7 +188,7 @@ us.uploadAvatar = function(input){
 
 us.errors = function(errors) {
     if (errors.status == 422) {
-        let msg = errors.responseJSON.errors;   
+        let msg = errors.responseJSON.errors;
         $(`#fs-modal .is-invalid`).removeClass('is-invalid');
         $(`#fs-modal .is-valid`).removeClass('is-valid');
         $(`#fs-modal .field`).addClass('is-valid');

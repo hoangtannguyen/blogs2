@@ -70,6 +70,7 @@ data-backdrop="static" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <form enctype="multipart/form-data">
+            @method()
           <input  hidden name="id" id="id" value="0" >
             <div class="modal-header">
                 <h5 class="modal-title text-center" id="fs-modal-title"></h5>
