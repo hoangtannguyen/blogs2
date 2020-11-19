@@ -112,7 +112,7 @@
         <li class="menu-border">
             <a class="open" href="#">SildeBar <i class="fa fa-caret-down"></i></a>
             <ul class="sub-menu">
-                <li><a href="#">SildeBar</a></li>
+                <li><a href="{{ route('UserPost.create') }}">Post</a></li>
                 <li><a href="#">SildeBar</a></li>
                 <li><a href="#">SildeBar</a></li>
             </ul>
