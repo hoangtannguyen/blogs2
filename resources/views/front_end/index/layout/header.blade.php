@@ -11,7 +11,7 @@
 
 <style>
 .swiper-container {
-      width: 75%;
+      width: 78%;
       padding-top: 50px;
       padding-bottom: 50px;
   }
