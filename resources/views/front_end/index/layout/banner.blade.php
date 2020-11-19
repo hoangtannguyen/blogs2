@@ -7,7 +7,7 @@
         </div>
 
         <div class="logo">
-            <h1>Blogger5555 Manager</h1>
+            <h1>Blogger Manager</h1>
         </div>
 
     <div class="header-login">
