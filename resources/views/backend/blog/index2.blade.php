@@ -13,7 +13,7 @@
         </div>
       </div>
     </section>
-    
+
 
     <section class="content">
       <div class="container-fluid">
@@ -87,11 +87,11 @@
             $('li').removeClass('active');
             $(this).parent('li').addClass('active');
         });
-  
+
     });
 </script>
 
-    
+
 <div id="fs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
 data-backdrop="static" aria-hidden="true">
 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -124,16 +124,16 @@ data-backdrop="static" aria-hidden="true">
                 </div>
                 <div class="form-group" style="border: 1px solid #ced4da;border-radius: .25rem;height:150px;width:150px">
                   <img id="showAvatar" src="" alt="" style="width: 100%;height:100%;" >
-                </div> 
+                </div>
                 <div class="form-group">
                     <label>Description</label>
                     <textarea id="description"  name="description"  class="form-control" rows="3" placeholder="Place some text here">
-                    </textarea>  
+                    </textarea>
                 </div>
                 <div class="form-group">
                   <label>Content</label>
                   <textarea id="content" name="content"   class="text-xara" rows="5" placeholder="Place some text here">
-                  </textarea>  
+                  </textarea>
                 </div>
                 <div class="form-group">
                   <label>Theme</label>
@@ -200,16 +200,16 @@ data-backdrop="static" aria-hidden="true">
         </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>        
+        </div>
       </div>
     </div>
   </div>
-  
 
 
- 
- 
+
+
+
 <script src="{{ asset('js/blog.js')}}"></script>
 
-  
+
 @endsection

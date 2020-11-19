@@ -8,7 +8,7 @@ Bl.index = function(page = 1){
         success: function(response){
             $("#blog_table").empty();
             $.each(response.data, function(index,value){
-              $("#blog_table").append(`         
+              $("#blog_table").append(`
                     <tr>
                         <td>${++index}</td>
                         <td>${value.title}</td>
@@ -16,21 +16,21 @@ Bl.index = function(page = 1){
                         <td>${value.view}</td>
                         <td>${value.categories.name}</td>
                         <td>${value.users && value.users.name}</td>
-                    <td> 
+                    <td>
                         <div style= "color:#fff" >
                             <a  style= "color:#000" class="btn btn-warning btn-sm" onclick="Bl.show(${value['id']})" >
-                                <i class="fa fa-eye"></i> Show                        
-                            </a>                 
+                                <i class="fa fa-eye"></i> Show
+                            </a>
                             <a class="btn btn-primary btn-sm" onclick="Bl.edit(${value['id']})"">
                                     <i class="fas fa-pencil-alt"></i> Edit
-                            </a>    
+                            </a>
                             <a class="btn btn-danger     btn-sm" onclick="Bl.destroy(${value['id']})"">
                                 <i class='fas fa-trash-alt'></i> Delete
-                            </a>                    
+                            </a>
                         </div>
                     </td>
-                    </tr>       
-                                                      
+                    </tr>
+
               `)
             })
         }
@@ -72,23 +72,23 @@ Bl.create = function (){
 }
 
 Bl.edit = function(id) {
-    
+
     $.ajax({
         url: "/blog/edit/" + id,
         method:"GET",
         dataType: 'json',
         success: function(data){
-     
+
             $('.card-block').html(data.content);
             $('#content').val(data.content);
             $('#title').val(data.title);
             $('#description').val(data.description);
             $('#showAvatar').attr('src', data.image);
             $('#image').attr('src', data.image);
-            $('#id').val(data.id);          
+            $('#id').val(data.id);
 
             $("#category_id").empty().append(`<option value=''>Choose ...</option>`);
-            $.each(data.category,function(i,v){ 
+            $.each(data.category,function(i,v){
                 $("#category_id").append(
                     `
                         <option  value='${v.id}' ${v.id==data.category_id ?'selected':""}>${v.name}</option>
@@ -124,7 +124,7 @@ Bl.save = function (){
                 url: "/blog/post",
                 method: "POST",
                 processData: false,
-                contentType: false,              
+                contentType: false,
                 data: BlObj,
                 success: function(){
                     $("#fs-modal").modal("hide");
@@ -147,7 +147,7 @@ Bl.save = function (){
                 url: "/blog/put/" + BlObj.id,
                 method: "POST",
                 processData: false,
-                contentType: false,              
+                contentType: false,
                 data: BlObj,
                 success: function(){
                     $("#fs-modal").modal("hide");
@@ -182,7 +182,7 @@ Bl.show = function(id) {
         error: function() {},
     });
 }
-    
+
 
 Bl.showUserPost = function(id) {
     $('#dx-modal').modal("show");
@@ -197,7 +197,7 @@ Bl.showUserPost = function(id) {
         error: function() {},
     });
 }
-    
+
 
 
 
@@ -212,9 +212,9 @@ Bl.destroy = function(id) {
       .then((willDelete) => {
         if (willDelete) {
           $.ajax({
-            url: "/blog/delete/"+ id +"/",
+            url: "/blog/delete/"+ id,
             method: 'POST',
-            success: function() {   
+            success: function() {
                 Bl.index();
                 swal("Poof! Your imaginary file has been deleted!", {
                     icon: "success",

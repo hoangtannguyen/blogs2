@@ -1,12 +1,12 @@
 <div class="trending-all">
     <div class="trending-title">
-        TRENDING      
+        TRENDING
     </div>
     <div class="trending-input">
         <input type="text" aria-label="Search" placeholder="Type key work end hit enter">
     </div>
     <div class="trending-like">
-        Like Share  
+        Like Share
     </div>
     <div class="trending-icons">
         <i class='fas fa-dragon'></i>
@@ -14,7 +14,7 @@
         <i class='fas fa-fish'></i>
         <i class='fas fa-dove'></i>
     </div>
-    <div class="trending-banner-title">   
+    <div class="trending-banner-title">
         Newest write
     </div>
     @foreach ( $blog_common as $common)
@@ -29,7 +29,7 @@
 
     <div class="category-all">
         <div class="trending-category">
-                CATEGORIES 
+                CATEGORIES
         </div>
         <div class="trending-p">
             <p>Games</p>
