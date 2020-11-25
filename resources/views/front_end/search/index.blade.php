@@ -14,7 +14,7 @@
     </div>
 
 @if (count($blogs) == 0)
-    <h1>kcdl</h1>
+    <img class="searcherror" src="/images/500.png" alt="">
 @else
 <div class="banner-one">
     @foreach ($blogs as $blog)

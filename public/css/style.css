@@ -733,6 +733,10 @@ footer {
   color: red;
 }
 
+.searcherror {
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .banner-unit {
     -ms-grid-columns: none;
