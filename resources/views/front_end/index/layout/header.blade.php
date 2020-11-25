@@ -11,7 +11,7 @@
 
 <style>
 .swiper-container {
-      width: 78%;
+      width: 60%;
       padding-top: 50px;
       padding-bottom: 50px;
   }
@@ -104,6 +104,18 @@
       width: 88%;
     }
 
+    .pagination {
+        display: flex;
+        text-align: center;
+    }
+
+    .page-item {
+        color: #2b2a2a;
+        margin: 0 5%;
+    }
+    .page-link {
+        font-size: 2.7vh;
+    }
 
 </style>
 

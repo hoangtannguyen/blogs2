@@ -3,7 +3,9 @@
         TRENDING
     </div>
     <div class="trending-input">
-        <input type="text" aria-label="Search" placeholder="Type key work end hit enter">
+        <form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
+            <input type="text" name="key" value="{{$keyword}}" aria-label="Search" placeholder="Type key work end hit enter">
+        </form>
     </div>
     <div class="trending-like">
         Like Share
@@ -18,13 +20,13 @@
         Newest write
     </div>
     @foreach ( $blog_common as $common)
-        <a href="{{ route('index.details',$common->id) }}" class="banner-trending">
+        <div class="banner-trending">
             <img class="trending-image-cate"  src="{{$common->image}}" alt="">
             <div class="trending-work">
                 <div class="trending-date">{{$common->created_at}}</div>
                 <div class="trending-title">{{$common->title}}</div>
             </div>
-        </a>
+        </div>
     @endforeach
 
     <div class="category-all">

@@ -803,5 +803,11 @@ footer {
   .logo {
     font-size: 1.5vh;
   }
+  .swiper-title {
+    margin-left: 5%;
+  }
+  .swiper-description {
+    margin-left: 5%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

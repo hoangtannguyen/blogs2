@@ -13,21 +13,33 @@ class IndexController extends Controller
     public function index(Request $request){
         $categorys = Category::all();
         $blog_all = Blog::take(3)->orderBy('view','desc')->get();
-        $blog_common = Blog::take(3)->orderBy('created_at', 'desc')->get();
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
         $keyword = $request->key;
-        return view('front_end.post.index',compact('categorys','blog_all','blog_common','keyword'));  
+        return view('front_end.post.index',compact('categorys','blog_all','blog_common','keyword'));
     }
-    
+
     public function details(Request $request,$id){
-        $blog_common = Blog::take(3)->orderBy('created_at', 'desc')->get();
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
         $blogs = Blog::where('id',$request->id)->firstOrFail();
+        $keyword = $request->key;
         $viewed = Session::get('viewed_post',[]);
         if (!in_array($blogs->id, $viewed)) {
             $blogs->increment('view');
             Session::push('viewed_post',$blogs->id);
         }
-        return view('front_end.details.index',compact('blogs','blog_common'));
+        return view('front_end.details.index',compact('blogs','blog_common','keyword'));
     }
-    
+
+    public function search(Request $request){
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
+        $keyword = $request->key;
+        $categorys = Category::all();
+        $blogs = Blog::where('title','like','%'.$keyword.'%')->get();
+        return view('front_end.search.index',compact('blog_common','blogs','keyword','categorys'));
+    }
+
+
+
+
 
 }

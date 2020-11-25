@@ -18,6 +18,9 @@ Route::get('/','IndexController@index')->name('index.index');
 Route::get('/details/{id}','IndexController@details')->name('index.details');
 Route::get('/search','IndexController@search')->name('index.search');
 Route::get('/trending','IndexController@trending')->name('index.trending');
+Route::get('/search','IndexController@search')->name('index.search');
+
+
 
 Route::view('admin', 'front_end.user_details.index');
 
@@ -89,7 +92,6 @@ Route::group(['prefix' => 'UserPost'], function () {
     Route::post('delete/{id}','UserPostController@destroy')->name('UserPost.destroy');
     Route::get('/search','UserPostController@search')->name('UserPost.search');
     Route::get('/details/{id}','UserPostController@details')->name('UserPost.details');
-
 });
 
 
