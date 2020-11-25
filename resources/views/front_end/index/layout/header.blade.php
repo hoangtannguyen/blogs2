@@ -41,7 +41,7 @@
     .menu-reponse {
       position: fixed;
       height: 100%;
-      width: 60%;
+      width: 80%;
       top: 0;
       background-color: #131314;
       z-index: 1000;

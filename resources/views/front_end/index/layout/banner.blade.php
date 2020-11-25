@@ -104,13 +104,14 @@
 
 <section class="menu-reponse">
 
-    <div class="menu-center">
+    <div class="menu-center on">
+        <i class="fa fa-close"></i>
         Menu
     </div>
 
     <ul class="menu-down">
         <li class="menu-border">
-            <a class="open" href="#">SildeBar <i class="fa fa-caret-down"></i></a>
+            <a class="open" href="#">Login <i class="fa fa-caret-down"></i></a>
             <ul class="sub-menu">
                 <li><a href="{{ route('UserPost.create') }}">Post</a></li>
                 <li><a href="#">SildeBar</a></li>
@@ -131,9 +132,7 @@
         <li class="menu-border"><a href="#">SildeBar</a></li>
     </ul>
 
-    <div class="menu-image">
-        <img style="#" src="/images/s2.jpg" alt="">
-    </div>
+
   </section>
 
 
