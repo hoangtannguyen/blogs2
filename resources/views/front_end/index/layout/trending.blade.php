@@ -19,6 +19,7 @@
     <div class="trending-banner-title">
         Newest write
     </div>
+<div  id="table_data">
     @foreach ( $blog_common as $common)
     <a  href="{{ route('index.details',$common->id) }}">
         <div class="banner-trending">
@@ -30,7 +31,12 @@
         </div>
     </a>
     @endforeach
+
     {{$blog_common->links()}}
+
+
+</div>
+
 
     <div class="category-all">
         <div class="trending-category">

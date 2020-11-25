@@ -34,6 +34,31 @@
 
 
 
+{{-- <script>
+    $(document).ready(function(){
+
+     $(document).on('click', '.pagination a', function(event){
+      event.preventDefault();
+      var page = $(this).attr('href').split('page=')[1];
+      fetch_data(page);
+     });
+
+     function fetch_data(page)
+     {
+      $.ajax({
+       url:"/?page="+page,
+       success:function(data)
+       {
+        $('#table_data').html(data);
+       }
+      });
+     }
+
+    });
+    </script> --}}
+
+
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=656859155250511&autoLogAppEvents=1" nonce="MVhQZKSV"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>

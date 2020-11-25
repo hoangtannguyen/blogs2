@@ -17,6 +17,7 @@ class IndexController extends Controller
         $keyword = $request->key;
         return view('front_end.post.index',compact('categorys','blog_all','blog_common','keyword'));
     }
+    
 
     public function details(Request $request,$id){
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
@@ -34,7 +35,7 @@ class IndexController extends Controller
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $keyword = $request->key;
         $categorys = Category::all();
-        $blogs = Blog::where('title','like','%'.$keyword.'%')->get();
+        $blogs = Blog::where('title','like','%'.$keyword.'%')->orWhere('description','like','%'.$keyword.'%')->get();
         return view('front_end.search.index',compact('blog_common','blogs','keyword','categorys'));
     }
 

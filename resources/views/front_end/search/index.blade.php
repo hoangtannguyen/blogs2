@@ -10,7 +10,7 @@
 <section class="banner-unit" id="dx-modal" >
 <div>
     <div class="banner-new">
-        LATEST NEWS
+        LATEST SEARCH
     </div>
 
 @if (count($blogs) == 0)
