@@ -63,7 +63,7 @@ html, body {
 }
 
 .header-text-description::after {
-  content: "$";
+  content: "Life Now !";
   color: #f32c2c;
   font-weight: 600;
 }
