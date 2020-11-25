@@ -12,11 +12,10 @@
     <div class="banner-new">
         LATEST NEWS
     </div>
-    <div class="banner-button">
-        @foreach ($categorys as $category)
-            <button class="button-new">{{$category->name}}</button>
-        @endforeach
-    </div>
+
+@if (count($blogs) == 0)
+    <h1>kcdl</h1>
+@else
 <div class="banner-one">
     @foreach ($blogs as $blog)
     <div class="banner-langding">
@@ -53,6 +52,9 @@
     </div>
     @endforeach
 </div>
+@endif
+
+
 </div>
 
 
