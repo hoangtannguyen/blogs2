@@ -61,12 +61,11 @@
             });
   });
 
-  $(document).ready(function() {
   $(".on").click(function(){
       $(".menu-reponse").toggleClass('active-menu');
       $(".on i").toggleClass('active-menu');
+      $("html body").toggleClass('active-menu');
   })
-});
 
 
 </script>

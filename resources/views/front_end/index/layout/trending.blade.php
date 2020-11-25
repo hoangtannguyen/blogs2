@@ -20,6 +20,7 @@
         Newest write
     </div>
     @foreach ( $blog_common as $common)
+    <a  href="{{ route('index.details',$common->id) }}">
         <div class="banner-trending">
             <img class="trending-image-cate"  src="{{$common->image}}" alt="">
             <div class="trending-work">
@@ -27,8 +28,8 @@
                 <div class="trending-title">{{$common->title}}</div>
             </div>
         </div>
+    </a>
     @endforeach
-
     {{$blog_common->links()}}
 
     <div class="category-all">
