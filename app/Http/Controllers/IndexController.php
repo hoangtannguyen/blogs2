@@ -13,13 +13,13 @@ class IndexController extends Controller
     public function index(Request $request){
         $categorys = Category::all();
         $blog_all = Blog::take(3)->orderBy('view','desc')->get();
-        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $keyword = $request->key;
         return view('front_end.post.index',compact('categorys','blog_all','blog_common','keyword'));
     }
 
     public function details(Request $request,$id){
-        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $blogs = Blog::where('id',$request->id)->firstOrFail();
         $keyword = $request->key;
         $viewed = Session::get('viewed_post',[]);
@@ -31,7 +31,7 @@ class IndexController extends Controller
     }
 
     public function search(Request $request){
-        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(5);
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $keyword = $request->key;
         $categorys = Category::all();
         $blogs = Blog::where('title','like','%'.$keyword.'%')->get();

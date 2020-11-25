@@ -29,6 +29,8 @@
         </div>
     @endforeach
 
+    {{$blog_common->links()}}
+
     <div class="category-all">
         <div class="trending-category">
                 CATEGORIES
