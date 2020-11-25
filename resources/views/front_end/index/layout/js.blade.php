@@ -63,9 +63,8 @@
 
   $(document).ready(function() {
   $(".on").click(function(){
-      $(".menu-reponse").toggleClass('active');
-      $("html body").toggleClass('all');
-      $(".on i").toggleClass('active');
+      $(".menu-reponse").toggleClass('active-menu');
+      $(".on i").toggleClass('active-menu');
   })
 });
 

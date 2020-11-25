@@ -71,7 +71,7 @@
       padding: 20px 0;
     }
 
-    .active {
+    .active-menu {
       left: 0;
     }
 
@@ -81,7 +81,7 @@
       font-size: 25px;
     }
 
-    .on i.active:before {
+    .on i.active-menu:before {
       content: "\f00d";
       color: #fff;
       font-size: 18px;
@@ -117,12 +117,10 @@
         font-size: 2.7vh;
     }
 
+    .all {
+        background-color: #0000
+    }
+
 </style>
 
-
-<style>
-  .all {
-    background-color: red;
-}
-</style>
 
