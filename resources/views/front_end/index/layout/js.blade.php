@@ -68,14 +68,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
-
   var typed = new Typed(".living",{
       strings: ["Write yourself down <br> something for your own life!",],
       typeSpeed: 100,
       backSpeed: 70,
       loop: true
   })
-
 </script>
 
 <script>
@@ -138,4 +136,19 @@
             let header = document.querySelector('header');
             header.classList.toggle("sticky",window.scrollY > 0)
         })
+
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if(this.scrollY > 0){
+                    $('.scroll-up-btn').addClass('show')
+                }else{
+                    $('.scroll-up-btn').removeClass('show')
+                }
+            })
+        })
+
+        $(".scroll-up-btn").click(function(){
+            $("html").animate({scrollTop: 0});
+        })
+
 </script>
