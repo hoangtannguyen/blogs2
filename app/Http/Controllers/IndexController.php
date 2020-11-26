@@ -35,6 +35,9 @@ class IndexController extends Controller
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $keyword = $request->key;
         $categorys = Category::all();
+        if(!$keyword){
+            return redirect()->route('index.index');
+        }
         $blogs = Blog::where('title','like','%'.$keyword.'%')->orWhere('description','like','%'.$keyword.'%')->get();
         return view('front_end.search.index',compact('blog_common','blogs','keyword','categorys'));
     }
