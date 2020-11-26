@@ -10,8 +10,9 @@
 <section class="banner-unit" id="dx-modal" >
 <div>
     <div class="banner-new">
-        LATEST SEARCH
+        LATEST SEARCH : {{count($blogs)}} <br>
     </div>
+
 
 @if (count($blogs) == 0)
     <img class="searcherror" src="/images/500.png" alt="">
