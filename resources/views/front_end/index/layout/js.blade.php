@@ -69,7 +69,7 @@
 
 <script>
   var typed = new Typed(".living",{
-      strings: ["Write yourself down <br> something for your own life!",],
+      strings: ["Write yourself down <br> own life!",],
       typeSpeed: 100,
       backSpeed: 70,
       loop: true
