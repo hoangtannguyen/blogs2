@@ -6,11 +6,19 @@ html,body
 
 
 .logo
+    position: fixed
+    height: 45px
+    width: 42px
+    background: crimson
+    text-align: center
+    line-height: 45px
     color: #fff
-    font-size: 1.7vh
-    letter-spacing: 5px
-    margin-left: 6%
-    padding: 1px
+    z-index: 9999
+    font-size: 30px
+    cursor: pointer
+    border-radius: 6px
+    transition: all 0.3s ease
+    margin-left: 5%
 
 
 #banner
@@ -26,9 +34,13 @@ html,body
     display: flex
     width: 100%
     // background-color: #0009
-    justify-content: space-between
+    justify-content: center
     align-items: center
     height: 11%
+
+
+
+
 
 .header-text
     position: absolute
@@ -88,6 +100,7 @@ header
     ul
         display: flex
         transform: skewX(-15deg)
+        align-items: center
         li
             margin: 0 2px
             list-style: none
@@ -126,6 +139,7 @@ a
         background: #000000
         padding: 10px
         text-decoration: none
+
 
 #home
     background-color: #f00909
@@ -641,8 +655,6 @@ footer
     .trending-all
         text-align: center
 
-    .logo
-        font-size: 1.5vh
     .swiper-title
         margin-left: 14%
     .swiper-description

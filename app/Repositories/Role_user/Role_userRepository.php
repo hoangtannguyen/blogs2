@@ -7,10 +7,10 @@ use App\Repositories\BaseRepository;
 use App\User;
 use App\Role;
 
-class Role_userRepository extends BaseRepository 
+class Role_userRepository extends BaseRepository
 // implements PostRepositoryInterface
 {
- 
+
     public function getModel()
     {
         return \App\Role_User::class;
@@ -18,7 +18,7 @@ class Role_userRepository extends BaseRepository
 
     public function getRoleUser()
     {
-        
+
         return  $role_user = $this->model->paginate(10);
 
         foreach($role_user as $role_use){

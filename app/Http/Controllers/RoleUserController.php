@@ -20,7 +20,7 @@ class RoleUserController extends Controller
     public function __construct(Role_userRepository $roleUserRepository)
     {
         $this->middleware('auth');
-        $this->roleUserRepository = $roleUserRepository;    
+        $this->roleUserRepository = $roleUserRepository;
     }
 
     public function view()
@@ -29,7 +29,7 @@ class RoleUserController extends Controller
     }
 
     public function index()
-    {   
+    {
         $role_user = $this->roleUserRepository->getRoleUser();
 
         foreach($role_user as $role_use){
@@ -39,7 +39,7 @@ class RoleUserController extends Controller
         foreach($role_user as $role_use){
             $role_use["user_name"] = User::find($role_use["user_id"])->name;
         }
-        
+
         return response()->json($role_user);
     }
 
@@ -54,16 +54,16 @@ class RoleUserController extends Controller
     {
         $atribute['role'] = Role::all();
         $atribute['user'] = User::all();
-        return response()->json($atribute);       
+        return response()->json($atribute);
     }
 
     public function store(Request $request)
     {
-        $data = $request->all();      
+        $data = $request->all();
         $role_user = $this->roleUserRepository->create($data);
         return response()->json($role_user);
     }
-    
+
     public function edit($id)
     {
         $role_user = $this->roleUserRepository->edits($id);
@@ -78,10 +78,19 @@ class RoleUserController extends Controller
         $role_user = $this->roleUserRepository->update($id, $data);
         return response()->json($role_user);
     }
-    
+
     public function destroy($id)
     {
         $role_user = $this->roleUserRepository->delete($id);
         return response()->json($role_user);
     }
+
+    public function user_login()
+    {
+        $role_user = $this->roleUserRepository->getAll();
+
+        return view('admin2.layout.sidebar',compact('role_user'));
+
+    }
+
 }

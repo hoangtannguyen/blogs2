@@ -19,7 +19,7 @@ class UserController extends Controller
     public function __construct(UserRepository $userRepository)
     {
         $this->middleware('auth');
-        $this->userRepository = $userRepository;    
+        $this->userRepository = $userRepository;
     }
 
     public function view()
@@ -28,7 +28,7 @@ class UserController extends Controller
     }
 
     public function index()
-    {   
+    {
         $users = $this->userRepository->getAll();
         return response()->json($users);
 
@@ -45,23 +45,26 @@ class UserController extends Controller
         $roles['role'] = Role::all();
         return response()->json($roles);
     }
-    
+
     public function store(UserRequest $request)
     {
-        $data = $request->all();    
+        $data = $request->all();
         if($request->hasFile('image')){
             $image = base64_encode(file_get_contents($request->file('image')));
             $data['image'] = 'data:image/;base64,'.$image;
-        }  
+        }
         $user = $this->userRepository->create($data);
         $user->password = Hash::make($request->password);
-        $role  = Role::where('name',$request->roles)->first();
+
+        $role  = Role::where('name',$request->roles)->get();
+
         $user->save();
+        
         $user->roles()->attach($role);
 
         return response()->json($user);
     }
-    
+
     public function edit($id)
     {
         $roles = $this->userRepository->edits($id);
@@ -85,7 +88,7 @@ class UserController extends Controller
         // $user->save();
         return response()->json($user);
     }
-    
+
     public function destroy($id)
     {
         $user = $this->userRepository->delete($id);

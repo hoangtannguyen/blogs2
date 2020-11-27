@@ -97,6 +97,7 @@ us.save = function(){
             usObj.append( 'image', $('#image')[0].files[0]);
             usObj.append( 'email', $('#email').val());
             usObj.append( 'password', $('#password').val());
+            usObj.append( 'roles', $('#roles').val());
             $.ajax({
                 method: "POST",
                 url: "/user/post",
@@ -119,6 +120,7 @@ us.save = function(){
             usObj.append( 'image', $('#image')[0].files[0]);
             usObj.append( 'email', $('#email').val());
             usObj.append( 'password', $('#password').val());
+            usObj.append( 'roles', $('#roles').val());
             usObj.id = $('#id').val()
             $.ajax({
                 method: "POST",

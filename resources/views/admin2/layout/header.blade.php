@@ -28,7 +28,7 @@
 <style>
   .dropdown a {
     color: #000
-      
+
   }
 
   .image-index{
@@ -38,8 +38,5 @@
     background-size: 100%;
     object-fit: cover;
   }
+  </style>
 
-  
- 
- 
-  </style> 

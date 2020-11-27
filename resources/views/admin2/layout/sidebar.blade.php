@@ -22,7 +22,7 @@
         </div>
       </li>
   </ul>
-  
+
   </nav>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
@@ -39,7 +39,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
-      
+
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="{{ Auth::user()->image }}" class="img-circle elevation-2" alt="User Image">
@@ -47,7 +47,7 @@
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
-      </div>  
+      </div>
 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -60,7 +60,9 @@
               </p>
             </a>
 
-          {{-- @if(Auth::user()->id) --}}
+
+
+          {{-- @if(  $role_user->role_id = "1" ) --}}
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('UserPost.create') }}" class="nav-link">
@@ -100,6 +102,6 @@
           {{-- @endif --}}
         </li>
 
-        
-          
+
+
   </aside>
