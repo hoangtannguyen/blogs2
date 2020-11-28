@@ -40,11 +40,11 @@
         THÍCH & CHIA SẼ
     </div>
     <div class="trending-icons">
-        <img class="trending-icons-images" src="images/facebook.png" alt="">
-        <img class="trending-icons-images" src="images/instagram.png" alt="">
-        <img class="trending-icons-images" src="images/linkedin.png" alt="">
-        <img class="trending-icons-images" src="images/twitter.png" alt="">
-        <img class="trending-icons-images" src="images/gp.png" alt="">
+        <img class="trending-icons-images" src="/images/facebook.png" alt="">
+        <img class="trending-icons-images" src="/images/instagram.png" alt="">
+        <img class="trending-icons-images" src="/images/linkedin.png" alt="">
+        <img class="trending-icons-images" src="/images/twitter.png" alt="">
+        <img class="trending-icons-images" src="/images/gp.png" alt="">
     </div>
     <div>
         <img class="trending-image" src="/images/share.png" alt="">

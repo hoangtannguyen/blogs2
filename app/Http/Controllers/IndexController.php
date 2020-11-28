@@ -23,12 +23,13 @@ class IndexController extends Controller
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $blogs = Blog::where('id',$request->id)->firstOrFail();
         $keyword = $request->key;
+        $categorys = Category::all();
         $viewed = Session::get('viewed_post',[]);
         if (!in_array($blogs->id, $viewed)) {
             $blogs->increment('view');
             Session::push('viewed_post',$blogs->id);
         }
-        return view('front_end.details.index',compact('blogs','blog_common','keyword'));
+        return view('front_end.details.index',compact('blogs','blog_common','keyword','categorys'));
     }
 
     public function search(Request $request){
