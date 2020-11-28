@@ -47,6 +47,9 @@
         <img class="trending-icons-images" src="images/gp.png" alt="">
     </div>
     <div>
+        <img class="trending-image" src="/images/share.png" alt="">
+    </div>
+    <div>
         <img class="trending-image" src="/images/3.jpg" alt="">
     </div>
 </div>
