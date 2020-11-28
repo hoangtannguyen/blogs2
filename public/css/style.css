@@ -560,6 +560,12 @@ div.trending-title:hover {
      object-fit: cover;
 }
 
+.trending-icons-images {
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}
+
 .page-work {
   max-width: 650px;
   word-break: break-word;

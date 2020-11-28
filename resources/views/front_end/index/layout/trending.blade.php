@@ -6,6 +6,7 @@
         <form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
             <input type="text" name="key" value="{{$keyword}}" aria-label="Search" placeholder="Type key work end hit enter">
         </form>
+
     </div>
     <div class="trending-banner-title">
         BÀI VIẾT MỚI
@@ -36,13 +37,14 @@
         </div>
     </div>
     <div class="trending-like">
-        Like Share
+        THÍCH & CHIA SẼ
     </div>
     <div class="trending-icons">
-        <i class='fas fa-dragon'></i>
-        <i class='fas fa-hippo'></i>
-        <i class='fas fa-fish'></i>
-        <i class='fas fa-dove'></i>
+        <img class="trending-icons-images" src="images/facebook.png" alt="">
+        <img class="trending-icons-images" src="images/instagram.png" alt="">
+        <img class="trending-icons-images" src="images/linkedin.png" alt="">
+        <img class="trending-icons-images" src="images/twitter.png" alt="">
+        <img class="trending-icons-images" src="images/gp.png" alt="">
     </div>
     <div>
         <img class="trending-image" src="/images/3.jpg" alt="">
