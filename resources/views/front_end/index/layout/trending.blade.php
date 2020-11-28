@@ -6,7 +6,7 @@
         <form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
             <input type="text" name="key" value="{{$keyword}}" aria-label="Search" placeholder="Type key work end hit enter">
         </form>
-
+            {{-- <button class="trending-button" type="submit"> SUBSCRIBE</button> --}}
     </div>
     <div class="trending-banner-title">
         BÀI VIẾT MỚI

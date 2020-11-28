@@ -317,6 +317,9 @@ a {
   grid-gap: 10px;
   padding: 5% 0;
   border-bottom: 0.1px solid #3f3b3b;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
 }
 
 .banner-one {
@@ -365,8 +368,8 @@ a {
   width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .banner-image:hover {
@@ -558,6 +561,14 @@ div.trending-title:hover {
   display: flex;
   grid-gap: 15px;
   padding: 3px 0 0;
+}
+
+.trending-button {
+  width: 100%;
+  background: #f32b2b;
+  border: none;
+  color: #fff;
+  font-size: 20px;
 }
 
 .items-image {
@@ -916,6 +927,47 @@ footer {
 input:focus {
   outline: none;
 }
+
+.banner-langding{
+    position: relative;
+    width: 50%;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  .banner-langding:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
 
 @media only screen and (max-width: 900px) {
   .all-search-top {

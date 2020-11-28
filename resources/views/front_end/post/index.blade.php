@@ -18,6 +18,9 @@
     @foreach ($category->blogs as $blog)
     <div class="banner-langding">
     <img class="banner-image" src="{{$blog->image}}" alt="">
+    {{-- <div class="overlay">
+        <div class="text">Hello World</div>
+    </div> --}}
         <div class="banner-work">
             <div class="banner-date">
                 {{$blog->created_at}} / in <span class="text-action">Game</span>
