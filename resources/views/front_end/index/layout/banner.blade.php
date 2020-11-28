@@ -1,13 +1,24 @@
 <section id="banner">
 
     <div class="header-top">
-        <div class="logo open">
+        <div class="logo">
             <i class="fa fa-search"></i>
         </div>
     </div>
 
+    <div >
+        <input class="header-search-top" type="text">
+    </div>
+
 <header>
 
+    <script>
+          $(".logo").click(function(){
+                $(".header-search-top").toggleClass('header-search-top-active');
+                $(".logo i").toggleClass('active-menu');
+            })
+
+    </script>
 
     <ul class="ul-enty">
     <li class="menu-li" id="home"><a href="{{ route('index.index')}}"><i class="fa fa-fw fa-home"></i> Home</a></li>
