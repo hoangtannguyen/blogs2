@@ -5,11 +5,12 @@
             <i class="fa fa-search"></i>
         </div>
     </div>
-
+<form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
     <div class="all-search-top">
-        <input class="header-search-top" type="text" placeholder=" Seach ...">
-        <button class="button-search-top" type="submit"> <i class="fa fa-close"></i> </button>
+            <input class="header-search-top"  name="key" value="{{$keyword}}" type="text" placeholder=" Seach ...">
+        <button class="button-search-top" type="submit"> <i class="fa fa-close"></i></button>
     </div>
+</form>
 
 <header>
 
