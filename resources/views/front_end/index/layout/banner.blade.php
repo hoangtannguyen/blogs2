@@ -17,7 +17,7 @@
     <ul class="ul-enty">
     <li class="menu-li" id="home"><a href="{{ route('index.index')}}"><i class="fa fa-fw fa-home"></i> Home</a></li>
         <li  class="on menu" id="home" ><a href="#"><i class="fa fa-bars"></i></a> Menu</li>
-        <li class="dropdown menu-li" ><a href=""> Information </a> <i  class='fa fa-hand-o-down'></i>
+        <li class="dropdown menu-li" ><a href=""> Thông tin bài viết </a> <i  class='fa fa-hand-o-down'></i>
             <ul class="dropdown-1">
                 <div class="ul-title ul-title-one">
                     <li ><a href="">Yone</a></li>
