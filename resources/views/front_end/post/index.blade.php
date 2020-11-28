@@ -3,7 +3,7 @@
 
 <div>
     <div class="banner-new">
-        LATEST NEWS
+        THEME BÀI VIẾT
     </div>
     <div class="banner-button">
 

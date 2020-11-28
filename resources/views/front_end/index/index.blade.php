@@ -13,7 +13,7 @@
 <section class="baner-dev">
 
   <div class="baner-all">
-     <a href=""> HOT LATEST </a>
+     <a href=""> HOT MỚI NHẤT </a>
   </div>
 
 <div class="swiper-container">
