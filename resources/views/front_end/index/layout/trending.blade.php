@@ -30,13 +30,9 @@
                 THỂ LOẠI
         </div>
         <div class="trending-p">
-            <p>Games</p>
-            <p>Gaming Tips & Tricks</p>
-            <p>Online Games</p>
-            <p>Team Games</p>
-            <p>Community</p>
-            <p>
-                Uncategorized</p>
+            @foreach ($categorys as $category)
+                <p>{{$category->name}} ({{count($category->blogs)}})</p>
+            @endforeach
         </div>
     </div>
     <div class="trending-like">

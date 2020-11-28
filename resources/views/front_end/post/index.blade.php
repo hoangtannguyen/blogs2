@@ -12,7 +12,7 @@
     @endforeach
 
     </div>
-    
+
 @foreach ($categorys as $category)
 <div class="banner-one">
     @foreach ($category->blogs as $blog)
@@ -31,30 +31,30 @@
                         <i class='fas fa-comment'></i>
                         <span class="fb-comments-count" data-href="{{ route('index.details',$blog->id) }}">0</span>
                     </a>
-                </div> 
+                </div>
                 <div>
                     <a href="#" class="text-action blog-name"><i class='far fa-edit'></i>
                         {{$blog->users->name}} </a>
                 </div>
             </div>
             <div class="banner-title">
-                {{$blog->title}} 
+                {{$blog->title}}
             </div>
             <div class="banner-content">
-                {{$blog->description}} 
+                {{$blog->description}}
             </div>
             <div class="banner-more">
             <a href="{{ route('index.details',$blog->id) }}">READ MODE <i class='fas fa-angle-double-right'></i></a>
             </div>
-        </div>        
-    </div>  
+        </div>
+    </div>
     @endforeach
 
-  
+
 </div>
-@endforeach 
+@endforeach
 </div>
 
-    
+
 @endsection
 

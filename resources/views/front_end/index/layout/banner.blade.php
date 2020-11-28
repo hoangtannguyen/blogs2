@@ -8,7 +8,7 @@
 <form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
     <div class="all-search-top">
         <input class="header-search-top"  name="key" value="{{$keyword}}" type="text" placeholder=" Seach ...">
-        <button class="button-search-top" > <i class="fa fa-close"></i></button>
+        <div class="button-search-top" > <i class="fa fa-close"></i></div>
     </div>
 </form>
 
@@ -68,18 +68,29 @@
             <i class='fas fa-address-book'></i>
             <ul class="dropdown-1">
                 <div class="ul-title ul-title-one">
-                    <li ><a href="">Thông tin</a></li>
-                    <li ><a href="">Ảnh của bạn</a></li>
-                    <li ><a href="{{ route('logout')}}">Đăng xuất</a></li>
+                    <li ><a href="">Thông tin của bạn</a></li>
+                    <li ><a href="">Xin chào : {{ Auth::user()->name }}</a></li>
                 </div>
                 <div class="dropdown-grid">
                 <div>
                     <li>
                     <a href=""><img style="width: 150px;border-radius:50%" src="{{ Auth::user()->image }}" alt=""></a>
                         <div class="title-down">
-                            {{ Auth::user()->name }}
                         </div>
                         <div class="title-date">
+                        </div>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <div class="title-user">
+                            <a href="{{ route('logout')}}">Ảnh của bạn</a>
+                        </div>
+                        <div class="title-user">
+                            <a href="{{ route('logout')}}">Đăng ảnh</a>
+                        </div>
+                        <div class="title-user">
+                            <a href="{{ route('logout')}}">Đăng xuất</a>
                         </div>
                     </li>
                 </div>
