@@ -6,19 +6,12 @@
         </div>
     </div>
 
-    <div >
-        <input class="header-search-top" type="text">
+    <div class="all-search-top">
+        <input class="header-search-top" type="text" placeholder=" Seach ...">
+        <button class="button-search-top" type="submit"> <i class="fa fa-close"></i> </button>
     </div>
 
 <header>
-
-    <script>
-          $(".logo").click(function(){
-                $(".header-search-top").toggleClass('header-search-top-active');
-                $(".logo i").toggleClass('active-menu');
-            })
-
-    </script>
 
     <ul class="ul-enty">
     <li class="menu-li" id="home"><a href="{{ route('index.index')}}"><i class="fa fa-fw fa-home"></i> Home</a></li>
@@ -69,7 +62,7 @@
             </ul>
         </li>
         @if (Auth::check())
-         <li class="dropdown menu-li" ><a href="">
+         <li class="dropdown" ><a href="">
             <img src="{{ Auth::user()->image }}" style="width:20px;height:20px;border-radius:50%"></a>
             <i class='fas fa-address-book'></i>
             <ul class="dropdown-1">
@@ -93,7 +86,7 @@
             </ul>
         </li>
         @else
-            <li class="dropdown menu-li" ><a href="{{ route('UserPost.create') }}"> Đăng bài viết </a>
+            <li class="dropdown" ><a href="{{ route('UserPost.create') }}"> Đăng bài viết </a>
             </li>
         @endif
     </ul>

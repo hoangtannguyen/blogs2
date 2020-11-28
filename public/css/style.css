@@ -21,25 +21,109 @@ html, body {
   margin-left: 5%;
 }
 
-.header-search-top {
-  position: fixed;
-  z-index: 9999;
-  left: 0%;
-  margin-top: -1%;
+.button-search-top {
   background: transparent;
-  width: 100%;
-  color: #e44c4c99;
+  color: transparent;
   border: none;
+  outline: none;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+.all-search-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  background: transparent;
+  width: 45%;
+  margin: 80px auto;
+  border-radius: 2px;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+.header-search-top {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: #fff;
+  font-size: 2vh;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  opacity: 0;
+}
+
+.header-search-top::-webkit-input-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+
+.header-search-top:-ms-input-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+
+.header-search-top::-ms-input-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+
+.header-search-top::placeholder {
+  color: transparent;
+  opacity: 0;
+}
+
+.header-search-top-active::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.header-search-top-active:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.header-search-top-active::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.header-search-top-active::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.button-search-top-active {
+  background: #f00909;
+  color: #fff;
+  font-size: 2.2vh;
+  border: none;
+  outline: none;
   -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
 }
 
 .header-search-top-active {
-  left: 0;
+  background: transparent;
+  border: none;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
   width: 100%;
-  padding: 2% 0;
-  border-top: 5px solid #ee1e1e;
-  background: #fff;
+  color: #fff;
+  font-size: 2vh;
+  opacity: 1;
+}
+
+.all-search-top-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  background: #f00909;
+  width: 45%;
+  margin: 80px auto;
+  border-radius: 2px;
 }
 
 #banner {
@@ -243,7 +327,7 @@ a {
 }
 
 .trending-input {
-  padding: 35px 0;
+  padding: 25px 0 0;
 }
 
 .trending-input input {
@@ -444,7 +528,7 @@ div.trending-title:hover {
 }
 
 .trending-banner-title {
-  padding: 20px 0 10px;
+  padding: 35px 0 0;
   color: white;
   font-size: 18px;
   font-weight: 500;
@@ -805,9 +889,19 @@ footer {
   footer {
     overflow: hidden;
   }
+  .li-login {
+    display: block;
+  }
+}
+
+input:focus {
+  outline: none;
 }
 
 @media only screen and (max-width: 900px) {
+  .all-search-top {
+    margin: 95px auto;
+  }
   .banner-langding {
     -ms-grid-columns: none;
         grid-template-columns: none;

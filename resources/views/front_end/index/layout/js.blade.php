@@ -32,33 +32,6 @@
   </div>
 </footer>
 
-
-
-{{-- <script>
-    $(document).ready(function(){
-
-     $(document).on('click', '.pagination a', function(event){
-      event.preventDefault();
-      var page = $(this).attr('href').split('page=')[1];
-      fetch_data(page);
-     });
-
-     function fetch_data(page)
-     {
-      $.ajax({
-       url:"/?page="+page,
-       success:function(data)
-       {
-        $('#table_data').html(data);
-       }
-      });
-     }
-
-    });
-    </script> --}}
-
-
-
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=656859155250511&autoLogAppEvents=1" nonce="MVhQZKSV"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -77,11 +50,10 @@
 </script>
 
 <script>
-
   $(document).ready(function() {
   $('.open').click(function () {
           $(this).next('.sub-menu').toggle();
-            });
+    });
   });
 
   $(".on").click(function(){
@@ -89,12 +61,25 @@
       $(".on i").toggleClass('active-menu');
     //   $("html body").toggleClass('active-menu');
   })
+</script>
 
+<script>
+    $(".logo").click(function(){
+          $(".header-search-top").toggleClass('header-search-top-active');
+          $(".all-search-top").toggleClass('all-search-top-active');
+          $(".button-search-top").toggleClass('button-search-top-active');
+      })
 
+      $(".button-search-top").click(function(){
+          $(".header-search-top").toggleClass('header-search-top-active');
+          $(".all-search-top").toggleClass('all-search-top-active');
+          $(".button-search-top").toggleClass('button-search-top-active');
+      })
 </script>
 
 
-  <script>
+
+<script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
@@ -113,7 +98,7 @@
         el: '.swiper-pagination',
       },
     });
-  </script>
+</script>
 
 
 <script>
