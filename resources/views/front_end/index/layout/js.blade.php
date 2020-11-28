@@ -23,10 +23,19 @@
       </div>
       <div>
         <div class="footer-title">
-          Warning
+          Chi tiết
         </div>
-        <div>
-          <img style="height: 130px;width:250px" src="/images/s2.jpg" alt="">
+        <div class="footer-enier">
+            Người chịu trách nhiệm :
+        </div>
+        <div class="footer-enier">
+            Antonyms Joy
+        </div>
+        <div class="footer-enier">
+            Tel : (84-4) 7 300 2828 - Fax : (84-4) 7 300 2828.
+        </div>
+        <div class="footer-enier">
+             237/GP-BTTTT ngày cấp 12/06/2015 B
         </div>
       </div>
   </div>

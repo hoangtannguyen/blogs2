@@ -499,6 +499,13 @@ div.trending-title:hover {
   overflow: visible;
 }
 
+.footer-enier {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #424040;
+}
+
 .trending-date {
   color: white;
   padding: 5px 0;
