@@ -196,6 +196,12 @@ html, body {
   border-radius: 15px;
   font-weight: 600;
   letter-spacing: 2px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#button-header:hover {
+  background-color: #b01ba5;
 }
 
 header.sticky {
