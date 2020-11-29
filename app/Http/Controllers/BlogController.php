@@ -23,17 +23,17 @@ class BlogController extends Controller
     public function __construct(BlogRepository $postRepository)
     {
         $this->middleware('auth');
-        $this->postRepository = $postRepository;    
+        $this->postRepository = $postRepository;
     }
 
     public function view(Request $request)
-    {          
+    {
         // $request->user()->authorizeRoles(['Admin']);
-        return view('backend.blog.index2');   
+        return view('backend.blog.index2');
     }
 
     public function index()
-    {   
+    {
         $blogs = $this->postRepository->getBlog();
         return response()->json($blogs);
     }
@@ -50,7 +50,7 @@ class BlogController extends Controller
     public function create()
     {
         $atribute['category'] = Category::all();
-        return response()->json($atribute);       
+        return response()->json($atribute);
     }
 
     public function store(BlogsRequest $request)
@@ -71,7 +71,7 @@ class BlogController extends Controller
         $blogs['category'] = Category::all();
         return response()->json($blogs);
     }
-    
+
     public function update(BlogsRequest $request, $id)
     {
         $data = $request->all();
@@ -96,19 +96,19 @@ class BlogController extends Controller
 
     public function view_index()
     {
-        return view('backend.index');  
+        return view('backend.index');
     }
 
     public function getSearch(Request $request) {
 
         $data = $request->get('search');
-    
+
         $search_drivers = Blog::where('title', 'like', "%{$data}%")
                          ->orWhere('description', 'like', "%{$data}%")
                          ->get();
-    
+
         return response()->json(['data' => $search_drivers]);
-    
+
     }
 
 

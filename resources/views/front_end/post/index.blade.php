@@ -23,7 +23,7 @@
     </div> --}}
         <div class="banner-work">
             <div class="banner-date">
-                {{$blog->created_at}} / in <span class="text-action">Game</span>
+                {{$blog->created_at->diffForHumans()}} / in <span class="text-action">Game</span>
             </div>
             <div class="banner-action">
                 <div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Role;
+use App\Role_User;
 use Illuminate\Http\Request;
 use App\Repositories\User\UserRepository;
 use App\Http\Requests\UserRequest;
@@ -56,11 +57,11 @@ class UserController extends Controller
         $user = $this->userRepository->create($data);
         $user->password = Hash::make($request->password);
 
-        $role  = Role::where('name',$request->roles)->get();
-
+        // $role  = Role::where('name',$request->roles)->get();
+        $user->roles = Role_User::all()->role_id;
         $user->save();
-        
-        $user->roles()->attach($role);
+
+        // $user->roles()->attach($role);
 
         return response()->json($user);
     }
