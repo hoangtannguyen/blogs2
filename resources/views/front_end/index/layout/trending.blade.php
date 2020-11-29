@@ -1,14 +1,32 @@
 <div class="trending-all">
     <div class="trending-title">
-        Liên hệ
+        Liên hệ Email
     </div>
     <div class="trending-input">
         <form action="{{route('index.contact')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="name" size="10" placeholder="Name">
-            {{-- <input type="text" name="content"  placeholder="Content">
-            <input type="email" name="email"  placeholder="Gửi mail cho gô !">
-            <button type="submit">email</button> --}}
+            <div class="title-email">
+                Tên
+            </div>
+            <div>
+                <input type="text" name="name"  placeholder="Nhập tên !">
+            </div>
+            <div class="title-email">
+                Email
+            </div>
+            <div class="input-email">
+                <input type="email" name="email"  placeholder="Nhập email !">
+            </div>
+            <div class="title-email">
+                Nội dung
+            </div>
+            <div class="input-email">
+                <textarea type="text" rows="5" name="content">
+                </textarea>
+            </div>
+            <div class="input-email">
+                <button type="submit">Submit</button>
+            </div>
         </form>
     </div>
     <div class="trending-banner-title">

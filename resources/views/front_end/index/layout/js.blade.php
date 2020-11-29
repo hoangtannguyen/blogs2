@@ -41,6 +41,22 @@
   </div>
 </footer>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+
+@if(session()->has('success'))
+<script >
+$.toast({
+  heading: 'Success',
+  text:  'Bạn đã gửi mail tới gô hoàng',
+  bgColor: '#FF1356',
+  position: 'mid-center',
+  stack: false
+})
+</script>
+@endif
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=656859155250511&autoLogAppEvents=1" nonce="MVhQZKSV"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>

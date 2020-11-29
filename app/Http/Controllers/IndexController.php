@@ -53,11 +53,7 @@ class IndexController extends Controller
             $mail->from($request->email);
             $mail->subject($request->content);
     });
-        return redirect()->route('index.index');
+        return redirect()->route('index.index')->with('success','#');
     }
-
-
-
-
 
 }

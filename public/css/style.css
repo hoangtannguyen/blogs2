@@ -330,6 +330,15 @@ a {
   color: white;
 }
 
+.input-email button {
+  width: 100%;
+  height: 45px;
+  background: #f32b2b;
+  color: #fff;
+  border: none;
+  font-size: 21px;
+}
+
 .trending-input {
   padding: 25px 0 0;
 }
@@ -338,11 +347,26 @@ a {
   width: 85%;
   height: 40px;
   background: transparent;
-  background-image: url(../images/search.png);
   background-repeat: no-repeat;
   background-position-y: 60%;
   background-position-x: 98%;
   background-size: 20px;
+  padding: 0 15px;
+  border-bottom: 2px solid  #501755;
+}
+
+.title-email {
+  padding: 10px 0;
+  color: #c4bbbb;
+}
+
+.trending-input textarea {
+  width: 85%;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position-y: 60%;
+  background-position-x: 98%;
+  background-size: 100%;
   padding: 0 15px;
   border-bottom: 2px solid  #501755;
 }
@@ -491,9 +515,10 @@ a {
 
 div .trending-title {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   white-space: nowrap;
   width: 120px;
+  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
 }
