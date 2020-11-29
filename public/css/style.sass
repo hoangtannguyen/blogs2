@@ -100,8 +100,10 @@ html,body
 
 .header-text
     position: absolute
-    left: 20%
-    top: 40%
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    text-align: center
     letter-spacing: 5px
     white-space: nowrap
     font-size: 3vh
@@ -118,9 +120,10 @@ html,body
     font-size: 3vh
 
 .header-text-description::after
-    content: "Life Now !"
+    content: "Life Now "
     color: #f32c2c
-    font-weight: 600
+    font-weight: 900
+    border-bottom: 2px solid #f32c2c
 
 #button-header
     background-color: #f32c2c
@@ -703,7 +706,7 @@ footer
     .banner-unit
         grid-template-columns: none
     .header-text
-        left: 8%
+        // left: 8%
     footer
         // padding: 174px 0 0
         overflow: hidden

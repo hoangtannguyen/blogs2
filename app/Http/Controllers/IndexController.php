@@ -52,7 +52,8 @@ class IndexController extends Controller
             $mail->to('hoangnguyenn4444@gmail.com',$request->name);
             $mail->from($request->email);
             $mail->subject($request->content);
-    });
+        });
+        
         return redirect()->route('index.index')->with('success','#');
     }
 

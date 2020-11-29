@@ -42,7 +42,6 @@
 </footer>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
 
 @if(session()->has('success'))
@@ -67,7 +66,7 @@ $.toast({
 
 <script>
   var typed = new Typed(".living",{
-      strings: ["Write yourself <br> down  own life! ",],
+      strings: ["Write yourself  down  own life! ",],
       typeSpeed: 100,
       backSpeed: 70,
       loop: true
