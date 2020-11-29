@@ -3,25 +3,25 @@
         Liên hệ Email
     </div>
     <div class="trending-input">
-        <form action="{{route('index.contact')}}" method="POST" enctype="multipart/form-data">
+        <form id="contact-input" action="{{route('index.contact')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="title-email">
                 Tên
             </div>
             <div>
-                <input type="text" name="name"  placeholder="Nhập tên !">
+                <input type="text" name="name" id="name" placeholder="Nhập tên !" required>
             </div>
             <div class="title-email">
                 Email
             </div>
             <div class="input-email">
-                <input type="email" name="email"  placeholder="Nhập email !">
+                <input type="email" name="email" id="email" placeholder="Nhập email !" required>
             </div>
             <div class="title-email">
                 Nội dung
             </div>
             <div class="input-email">
-                <textarea type="text" rows="5" name="content">
+                <textarea type="text" rows="5" id="content" name="content" required>
                 </textarea>
             </div>
             <div class="input-email">

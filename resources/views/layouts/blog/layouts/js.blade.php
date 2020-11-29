@@ -48,7 +48,7 @@
       }
       else {
           $(".error-validation").hide();
-        
+
       }
 
     })
@@ -60,7 +60,7 @@
           debug: false,
           errorClass: "error",
           errorElement: "label",
-         
+
           rules: {
             title: {
                   required: true,
@@ -83,15 +83,15 @@
 
             view: {
                   required: true,
-                
+
               },
             title_two: {
                   required: true,
-                
+
               },
             category_id: {
                   required: true,
-                 
+
               },
           },
           messages: {
@@ -124,39 +124,39 @@
           highlight: function(element, errorClass) {
             $(element).removeClass(errorClass);
     }
-  
+
       })
-  } 
+  }
 </script>
 
 
 
  {{-- <script>
   $(document).ready(function() {
-  
+
     $('#contact_form').submit(function(e) {
 
- 
+
       var title = $('#title').val();
       // var last_name = $('#last_name').val();
       // var email = $('#email').val();
       // var password = $('#password').val();
-      
-    
-  
+
+
+
       $(".error").remove();
-  
+
       if (title === "") {
         $('#title').after('<span class="error">This field is required</span>');
         e.preventDefault();
       }
       // if (last_name.length < 1) {
       //   $('#last_name').after('<span class="error">This field is required</span>');
-              
+
       // }
       // if (email.length < 1) {
       //   $('#email').after('<span class="error">This field is required</span>');
-        
+
       // } else {
       //   var regEx = /^[A-Za-z0-9_\-\.]+\@[A-Za-z0-9_\-\.]+\.[a-z]{2,3}$/;
       //   var validEmail = regEx.test(email);
@@ -167,9 +167,9 @@
       // if (password.length < 8) {
       //   $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
       //   }
-       
-     
+
+
     });
-  
+
   });
   </script>   --}}

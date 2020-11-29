@@ -73,6 +73,8 @@ $.toast({
   })
 </script>
 
+
+
 <script>
   $(document).ready(function() {
   $('.open').click(function () {
@@ -83,7 +85,6 @@ $.toast({
   $(".on").click(function(){
       $(".menu-reponse").toggleClass('active-menu');
       $(".on i").toggleClass('active-menu');
-    //   $("html body").toggleClass('active-menu');
   })
 </script>
 
@@ -117,7 +118,6 @@ $.toast({
         slideShadows: true,
       },
       loop:true,
-
       pagination: {
         el: '.swiper-pagination',
       },
