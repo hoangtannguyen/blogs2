@@ -1,12 +1,15 @@
 <div class="trending-all">
     <div class="trending-title">
-        TRENDING
+        Liên hệ
     </div>
     <div class="trending-input">
-        <form action="{{route('index.search')}}" method="GET" enctype="multipart/form-data">
-            <input type="text" name="key" value="{{$keyword}}" aria-label="Search" placeholder="Type key work end hit enter">
+        <form action="{{route('index.contact')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="text" name="name" size="10" placeholder="Name">
+            {{-- <input type="text" name="content"  placeholder="Content">
+            <input type="email" name="email"  placeholder="Gửi mail cho gô !">
+            <button type="submit">email</button> --}}
         </form>
-            {{-- <button class="trending-button" type="submit"> SUBSCRIBE</button> --}}
     </div>
     <div class="trending-banner-title">
         BÀI VIẾT MỚI
@@ -23,7 +26,7 @@
         </div>
     </a>
     @endforeach
-    {{$blog_common->links()}}
+    {{-- {{$blog_common->links()}} --}}
 </div>
 
     <div class="category-all">

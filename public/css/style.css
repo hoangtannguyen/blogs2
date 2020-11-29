@@ -563,14 +563,6 @@ div.trending-title:hover {
   padding: 3px 0 0;
 }
 
-.trending-button {
-  width: 100%;
-  background: #f32b2b;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-}
-
 .items-image {
   width: 320px;
   height: 200px;

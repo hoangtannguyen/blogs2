@@ -19,7 +19,7 @@ Route::get('/details/{id}','IndexController@details')->name('index.details');
 Route::get('/search','IndexController@search')->name('index.search');
 Route::get('/trending','IndexController@trending')->name('index.trending');
 Route::get('/search','IndexController@search')->name('index.search');
-
+Route::post('/contact','IndexController@contact')->name('index.contact');
 
 
 Route::view('admin', 'front_end.user_details.index');

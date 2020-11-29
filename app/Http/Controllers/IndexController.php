@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Blog;
 use App\Role;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
@@ -41,6 +42,18 @@ class IndexController extends Controller
         }
         $blogs = Blog::where('title','like','%'.$keyword.'%')->orWhere('description','like','%'.$keyword.'%')->get();
         return view('front_end.search.index',compact('blog_common','blogs','keyword','categorys'));
+    }
+
+    public function contact(Request $request){
+        Mail::send('email.contact',[
+            'name' => $request->name,
+            'content' => $request->content,
+        ], function($mail) use($request){
+            $mail->to('hoangnguyenn4444@gmail.com',$request->name);
+            $mail->from($request->email);
+            $mail->subject($request->content);
+    });
+        return redirect()->route('index.index');
     }
 
 
