@@ -21,8 +21,7 @@
                 Nội dung
             </div>
             <div class="input-email">
-                <textarea type="text" rows="5" id="content" name="content" required>
-                </textarea>
+                <textarea type="text" rows="5" id="content" name="content" required></textarea>
             </div>
             <div class="input-email">
                 <button type="submit">Submit</button>

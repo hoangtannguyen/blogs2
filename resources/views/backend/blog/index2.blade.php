@@ -127,13 +127,11 @@ data-backdrop="static" aria-hidden="true">
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea id="description"  name="description"  class="form-control" rows="3" >
-                    </textarea>
+                    <textarea id="description"  name="description"  class="form-control" rows="3" ></textarea>
                 </div>
                 <div class="form-group">
                   <label>Content</label>
-                  <textarea id="content" name="content"   class="text-xara" rows="5" >
-                  </textarea>
+                  <textarea id="content" name="content"   class="text-xara" rows="5" ></textarea>
                 </div>
                 <div class="form-group">
                   <label>Theme</label>
