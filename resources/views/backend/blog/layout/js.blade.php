@@ -11,18 +11,9 @@
 </script>
 
 <script>
-    $(document).ready(function(){
-        $('#btn-file-reset').on('click', function() {
-        $('#image').val('');
-        $('#output').attr('src',"");
-      });
-    })
-
-</script>
-
-<script>
     var openFile = function(file) {
     var input = file.target;
+
     var reader = new FileReader();
     reader.onload = function(){
       var dataURL = reader.result;
@@ -60,15 +51,24 @@
 
  <script>
 
+  // CKEDITOR.replace('noidung');
+     //  if(CKEDITOR.instances['noidung'].getData() === '') {
+    //   $("#cke_noidung").after('<span class="error">This field is required</span>');
+    //   $('#cke_noidung').css("border","1px solid red");
+    //   $('#cke_1_bottom').css("border-top","1px solid red");
+    //   $('#cke_1_top').css("border-bottom","1px solid red");
+    //   e.preventDefault();
+    //   }
+
   $(document).ready(function() {
 
     $('#contact_form').submit(function(e) {
 
       let title = $('#title').val();
       let description = $('#description').val();
-      let content = $('#content').val();
       let category_id = $('#category_id').val();
       let title_two = $('#title_two').val();
+      let xara = $('#text-xara').val();
       let image = $('#image').val();
 
       $(".error").remove();

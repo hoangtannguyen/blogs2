@@ -98,7 +98,7 @@
             </ul>
         </li>
         @else
-            <li class="dropdown" ><a href="{{ route('UserPost.create') }}"> Đăng bài viết </a>
+            <li class="dropdown" ><a href="{{ route('login') }}"> Đăng bài viết </a>
             </li>
         @endif
     </ul>
