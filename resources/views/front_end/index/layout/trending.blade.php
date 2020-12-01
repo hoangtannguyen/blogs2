@@ -21,10 +21,10 @@
                 Nội dung
             </div>
             <div class="input-email">
-                <textarea type="text" rows="5" id="content" name="content" required></textarea>
+                <textarea type="text" rows="5"  name="content" required></textarea>
             </div>
             <div class="input-email">
-                <button type="submit">Submit</button>
+                <button class="button-top" type="submit">Submit</button>
             </div>
         </form>
     </div>
@@ -73,3 +73,4 @@
         <img class="trending-image" src="/images/3.jpg" alt="">
     </div>
 </div>
+

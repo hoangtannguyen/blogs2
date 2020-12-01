@@ -4,16 +4,25 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-      $('#categories').on('change', function() {                     
+      $('#categories').on('change', function() {
           $("#category_form").submit();
       });
   });
 </script>
 
 <script>
+    $(document).ready(function(){
+        $('#btn-file-reset').on('click', function() {
+        $('#image').val('');
+        $('#output').attr('src',"");
+      });
+    })
+
+</script>
+
+<script>
     var openFile = function(file) {
     var input = file.target;
-
     var reader = new FileReader();
     reader.onload = function(){
       var dataURL = reader.result;
@@ -25,32 +34,41 @@
 
 </script>
 
-<script>
+{{-- <script>
   $(function () {
     $('.text-xara').summernote()
   })
-</script>
+</script> --}}
+
+
+<script>
+    $('.summernote').summernote({
+      placeholder: 'Viết lên điều gì đó !',
+      tabsize: 2,
+      height: 250,
+      toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview', 'help']]
+      ]
+    });
+  </script>
 
  <script>
 
-  // CKEDITOR.replace('noidung');
-     //  if(CKEDITOR.instances['noidung'].getData() === '') {
-    //   $("#cke_noidung").after('<span class="error">This field is required</span>');
-    //   $('#cke_noidung').css("border","1px solid red");
-    //   $('#cke_1_bottom').css("border-top","1px solid red");
-    //   $('#cke_1_top').css("border-bottom","1px solid red");
-    //   e.preventDefault();
-    //   }
-
   $(document).ready(function() {
-  
+
     $('#contact_form').submit(function(e) {
 
       let title = $('#title').val();
       let description = $('#description').val();
+      let content = $('#content').val();
       let category_id = $('#category_id').val();
       let title_two = $('#title_two').val();
-      let xara = $('#text-xara').val();
       let image = $('#image').val();
 
       $(".error").remove();
@@ -100,7 +118,7 @@
     });
 
   });
-  </script>  
+  </script>
 
 
 
@@ -124,11 +142,10 @@
             icon: "success",
           });
           form.submit()
-        }  
+        }
         else {
           swal("Your imaginary file is safe!");
         }
       });
   });
 </script>
- 

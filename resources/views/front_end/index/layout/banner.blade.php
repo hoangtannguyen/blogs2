@@ -87,7 +87,7 @@
                             <a href="{{ route('logout')}}">Ảnh của bạn</a>
                         </div>
                         <div class="title-user">
-                            <a href="{{ route('logout')}}">Đăng ảnh</a>
+                            <a href="{{ route('index.user_post')}}">Đăng ảnh</a>
                         </div>
                         <div class="title-user">
                             <a href="{{ route('logout')}}">Đăng xuất</a>

@@ -7,7 +7,6 @@ html, body {
 }
 
 .logo {
-  height: 45px;
   width: 42px;
   background: #f00909;
   text-align: center;
@@ -44,13 +43,6 @@ html, body {
 }
 
 .header-search-top {
-  background: transparent;
-  border: none;
-  width: 100%;
-  color: #fff;
-  font-size: 2vh;
-  -webkit-transition: all 0.9s ease;
-  transition: all 0.9s ease;
   display: none;
 }
 
@@ -112,7 +104,6 @@ html, body {
   width: 100%;
   color: #fff;
   font-size: 2vh;
-  opacity: 1;
   display: block;
 }
 
@@ -130,7 +121,7 @@ html, body {
 #banner {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background-image: url("../images/hero-1.jpg");
   background-size: cover;
   background-position: center;
@@ -251,10 +242,6 @@ header ul li {
   padding: 15px;
 }
 
-header ul li:hover {
-  background-color: #f72d2d;
-}
-
 header ul a {
   text-decoration: none;
   color: white;
@@ -340,7 +327,43 @@ a {
   color: white;
 }
 
-.input-email button {
+.input-post {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-bottom: 2px solid #501755;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.img-uot-all {
+  border: 2px solid #501755;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  width: 150px;
+  height: 130px;
+}
+
+.img-uot-two {
+  width: 100%;
+  height: 100px;
+}
+
+.user-post-all label {
+  color: #fff;
+  font-size: 20px;
+}
+
+.input-post-padding {
+  padding: 10px 0;
+}
+
+#btn-file-reset {
+  color: #501755;
+  font-size: 30px;
+}
+
+.button-top {
   width: 100%;
   height: 45px;
   background: #f32b2b;
@@ -368,6 +391,14 @@ a {
 .title-email {
   padding: 10px 0;
   color: #c4bbbb;
+}
+
+#contact_form {
+  width: 99%;
+}
+
+.input-title {
+  width: 90% !important;
 }
 
 .trending-input textarea {
