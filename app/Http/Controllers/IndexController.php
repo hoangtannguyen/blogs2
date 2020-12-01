@@ -57,12 +57,6 @@ class IndexController extends Controller
         return redirect()->route('index.index')->with('success','#');
     }
 
-    public function user_post(Request $request){
-        $keyword = $request->key;
-        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
-        $categorys = Category::all();
 
-        return view('front_end.user_post.index',compact('keyword','blog_common','categorys'));
-    }
 
 }

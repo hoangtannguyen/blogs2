@@ -19,7 +19,7 @@ Route::get('/details/{id}','IndexController@details')->name('index.details');
 Route::get('/search','IndexController@search')->name('index.search');
 Route::get('/trending','IndexController@trending')->name('index.trending');
 Route::get('/search','IndexController@search')->name('index.search');
-Route::get('/user_post','IndexController@user_post')->name('index.user_post');
+Route::get('/user_post','UserPostController@user_post')->name('index.user_post');
 Route::post('/contact','IndexController@contact')->name('index.contact');
 
 

@@ -83,4 +83,12 @@ class UserPostController extends Controller
        $this->UserPostRepository->delete($id);
        return back()->with('success','UserPost deleted successfully');
     }
+
+    public function user_post(Request $request){
+        $keyword = $request->key;
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
+        $categorys = Category::all();
+
+        return view('front_end.user_post.index',compact('keyword','blog_common','categorys'));
+    }
 }
