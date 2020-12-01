@@ -101,7 +101,7 @@ html, body {
   padding: 10px;
   background: transparent;
   width: 45%;
-  margin: 100px auto !important;
+  margin: 80px auto !important;
   border-radius: 2px;
   -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
@@ -114,8 +114,15 @@ html, body {
   padding: 10px;
   background: #f00909;
   width: 45%;
-  margin: 110px auto !important;
+  margin: 90px auto !important;
   border-radius: 2px;
+}
+
+.user-textarea {
+  width: 90%;
+  background: transparent;
+  padding: 0 15px;
+  border-bottom: 2px solid #501755;
 }
 
 #banner {
@@ -139,7 +146,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 11%;
+  height: 15%;
 }
 
 .header-text {
@@ -208,7 +215,7 @@ header.sticky {
 header {
   position: fixed;
   z-index: 1000;
-  top: 70px;
+  top: 7%;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,6 +978,9 @@ footer {
   .banner-unit {
     -ms-grid-columns: none;
         grid-template-columns: none;
+  }
+  .header-text {
+    top: 67%;
   }
   footer {
     overflow: hidden;

@@ -1,7 +1,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-
 <script type="text/javascript">
   $(document).ready(function() {
       $('#categories').on('change', function() {
@@ -63,67 +62,107 @@
   $(document).ready(function() {
 
     $('#contact_form').submit(function(e) {
-
       let title = $('#title').val();
       let description = $('#description').val();
+      let content = $('#content').val();
       let category_id = $('#category_id').val();
-      let title_two = $('#title_two').val();
-      let xara = $('#text-xara').val();
       let image = $('#image').val();
-
       $(".error").remove();
-      $('#title').css("border","");
-      $('#image').css("border","");
-      $('#description').css("border","");
-      $('#category_id').css("border","");
-      $('#cke_noidung').css("border","");
-      $('#cke_1_bottom').css("border","");
-      $('#cke_1_top').css("border","");
-
-
-      if (xara == "") {
-        $('.s1').after('<span class="error">This field is required</span>');
-        $('.circle').css("display","block");
-        e.preventDefault();
-      }
-
+    //   $('#title').css("border","");
+    //   $('#image').css("border","");
+    //   $('#description').css("border","");
+    //   $('#category_id').css("border","");
+    //   $('#cke_noidung').css("border","");
+    //   $('#cke_1_bottom').css("border","");
+    //   $('#cke_1_top').css("border","");
       if (image == "") {
-        $('#image').after('<span class="error">This field is required</span>');
-        $('.circle').css("display","block");
+        $('#nameError').after('<span class="error"> Chọn ảnh đi bố đi bố ! </span>');
+        // $('.circle').css("display","block");
         e.preventDefault();
       }
-
-
       if (title == "") {
-        $('#title').after('<span class="error">This field is required</span>');
-        $('#title').css("border","1px solid red");
-        $('.circle').css("display","block");
+        $('#title').after('<span class="error"> Nhập đi bố ! </span>');
+        // $('#title').css("border","1px solid red");
+        // $('.circle').css("display","block");
         e.preventDefault();
       }
-
-
-      if (description == "" || description.length > 60){
-        $('#description').after('<span class="error">This field is required</span>');
-        $('#description').css("border","1px solid red");
-        $('small').css("display","block");
+      if (title.length > 40){
+        $('#title').after('<span class="error"> Nhập dài thế bố </span>');
         e.preventDefault();
       }
-
+      if (description == ""){
+        $('#description').after('<span class="error"> Nhập đi bố ! </span>');
+        e.preventDefault();
+      }
+      if (description.length > 100){
+        $('#description').after('<span class="error">Nhập dài thế  bố</span>');
+        e.preventDefault();
+      }
+      if (content == ""){
+        $('.note-editor').after('<span class="error"> Nhập đi bố ! </span>');
+        e.preventDefault();
+      }
       if (category_id == 'default'){
-        $('#category_id').after('<span class="error">This field is required</span>');
-        $('#category_id').css("border","1px solid red");
-        $('small').css("display","block");
+        $('#category_id').after('<span class="error"> Nhập đi bố ! </span>');
+        // $('#category_id').css("border","1px solid red");
+        // $('small').css("display","block");
         e.preventDefault();
       }
     });
-
   });
   </script>
+
+  <script>
+      $(document).ready(function(){
+        $('#btn-file-reset').on('click', function() {
+        $('#image').val('');
+        $('#output').attr('src',"");
+      });
+    })
+  </script>
+
+{{--
+<script type="text/javascript">
+    $('#contact_form').on('submit',function(event){
+
+        event.preventDefault();
+
+        title = $('#title').val();
+        description = $('#description').val();
+        content = $('#content').val();
+        category_id = $('#category_id').val();
+        image = $('#image').val();
+
+          $.ajax({
+            url: "/UserPost/post",
+            type:"POST",
+            data:{
+              "_token": "{{ csrf_token() }}",
+              title:title,
+              description:description,
+              content:content,
+              category_id:category_id,
+              image:image,
+            },
+            success:function(response){
+              console.log(response); #Its return your success message
+            },
+
+            error: function(response) {
+                $('#nameError').text(response.responseJSON.errors.title);
+                $('#emailError').text(response.responseJSON.errors.description);
+                $('#mobileNumberError').text(response.responseJSON.errors.content);
+                $('#aboutError').text(response.responseJSON.errors.category_id);
+                $('#aboutError').text(response.responseJSON.errors.image);
+             }
+
+           });
+          });
+  </script> --}}
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-
 <script>
  $('.delete-confirm').click(function(event) {
       var form =  $(this).closest("form");

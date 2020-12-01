@@ -28,19 +28,20 @@
                   <div class="input-post-padding">
                     <label>Tiêu đề</label><br>
                     <input type="text" class="input-post input-title"  id="title" name="title"  placeholder="Nhập tiêu đề !">
-                  </div>
+                </div>
                   <div class="input-post-padding">
                     <label>Ảnh mô tả</label><br>
                     <input type='file' accept='image/*'  id="image" name="image" onchange='openFile(event)'>
-                  </div>
+                </div>
                   <div class="input-post-padding img-uot-all">
                        <img id='output' class="img-uot-two" src="/images/conruoi..jpg" >
                        <div id="btn-file-reset"><i class="fa fa-close"></i>
                        </div>
                   </div>
+                  <div class="alert-message" id="nameError"></div>
                   <div class="input-post-padding">
-                    <label>Mô tả</label>
-                    <textarea  id="description"  name="description"  class="summernote" rows="4"></textarea>
+                    <label>Mô tả</label><br>
+                    <textarea  id="description"  name="description" class="user-textarea"  rows="5"></textarea>
                   </div>
                   <div class="input-post-padding">
                     <label>Nội dung</label>

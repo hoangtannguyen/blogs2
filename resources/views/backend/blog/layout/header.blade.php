@@ -1,7 +1,7 @@
 
 <style>
   label.error {color:red;}
-  
+
   input.error {border:1px dotted red;}
 
     .error {
@@ -15,7 +15,7 @@
   }
 
 
-.img-uot {  
+.img-uot {
     max-width: 40%;
     max-height: 100%
 }
@@ -25,7 +25,7 @@ label::after {
   color: rgb(189, 19, 19);
   content: "*";
   font-size: 20px;
-  margin-left: 5px;  
+  margin-left: 5px;
 }
 
 .circle{
@@ -62,3 +62,9 @@ label::after {
   }
 
 </style>
+
+<style>
+    .alert-message {
+      color: red;
+    }
+  </style>

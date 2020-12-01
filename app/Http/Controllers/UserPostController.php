@@ -10,6 +10,7 @@ use App\Repositories\Blog\BlogRepository;
 use App\Repositories\User\UserRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\userPostRequest;
 
 
 class UserPostController extends Controller
@@ -23,13 +24,13 @@ class UserPostController extends Controller
     public function __construct(BlogRepository $UserPostRepository ,UserRepository $userRepository)
     {
         $this->middleware('auth');
-        $this->UserPostRepository = $UserPostRepository;    
-        $this->userRepository = $userRepository;    
+        $this->UserPostRepository = $UserPostRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function index(Request $request)
-    {          
-        $blogs = $this->UserPostRepository->getUserPost();  
+    {
+        $blogs = $this->UserPostRepository->getUserPost();
         return view('backend.blog.index',compact('blogs'));
     }
 
@@ -45,7 +46,7 @@ class UserPostController extends Controller
         return view('backend.blog.create',compact('categorys'));
     }
 
-    public function store(Request $request)
+    public function store(userPostRequest $request)
     {
         $data = $request->all();
         if($request->hasFile('image')){
