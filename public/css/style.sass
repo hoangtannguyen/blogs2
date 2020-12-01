@@ -77,6 +77,13 @@ html,body
     margin: 90px auto !important
     border-radius: 2px
 
+.button-user-post
+    border: none
+    background-image: linear-gradient(to right, #f32c2c, #ebdc11)
+    padding: 2% 4%
+    font-size: 10px
+    color: #0e0b0b
+
 .user-textarea
     width: 90%
     background: transparent
@@ -273,7 +280,7 @@ a
 .button-top
     width: 100%
     height: 45px
-    background: #f32b2b
+    background-image: linear-gradient(to right, rgb(243, 44, 44), rgb(235, 220, 17))
     color: #fff
     border: none
     font-size: 21px
@@ -745,7 +752,7 @@ footer
 .searcherror
     width: 100%
 
-@media only screen and ( max-width: 768px  )
+@media only screen and ( max-width: 767px  )
     .banner-unit
         grid-template-columns: none
     .header-text
@@ -762,7 +769,13 @@ input:focus
 
 @media only screen and ( max-width: 900px  )
 
-    .header-text
+    .header-text-description
+        padding: 6px 0
+
+    .logo
+        width: 30px
+        height: 30px
+        line-height: 28px
 
     .all-search-top
         margin: 95px auto

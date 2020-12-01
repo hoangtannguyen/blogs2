@@ -57,7 +57,7 @@
                     </select>
                   </div>
                 <div>
-                    <button type="submit" class="btn btn-success float-right" ><i class="fas fa-plus-circle"></i> Đăng bài</button>
+                    <button type="submit" class="button-user-post" ><i class="fas fa-plus-circle"></i> Đăng bài</button>
                 </div>
             </form>
         </div>
