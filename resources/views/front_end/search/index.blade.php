@@ -11,6 +11,7 @@
 <div>
     <div class="banner-new">
         LATEST SEARCH : {{count($blogs)}} <br>
+        Tìm kiếm : {{$keyword}}
     </div>
 
 
