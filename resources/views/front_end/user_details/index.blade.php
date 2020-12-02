@@ -31,6 +31,7 @@
         </div>
     </div>
 
+
     @if(session()->has('message'))
     <div class="success-user">
         {{ session()->get('message') }}

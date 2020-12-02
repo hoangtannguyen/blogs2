@@ -15,7 +15,7 @@ class BlogRepository extends BaseRepository
 
     public function getBlog()
     {
-        return $this->model->with('categories')->with('users')->orderBy('view', 'desc')->paginate(10);
+        return $this->model->with('categories')->with('users')->orderBy('view', 'desc')->paginate(100);
     }
 
     public function getUserPost()
