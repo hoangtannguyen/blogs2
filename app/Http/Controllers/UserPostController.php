@@ -31,7 +31,13 @@ class UserPostController extends Controller
     public function index(Request $request)
     {
         $blogs = $this->UserPostRepository->getUserPost();
-        return view('backend.blog.index',compact('blogs'));
+        $keyword = $request->key;
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
+        $categorys = Category::all();
+        // return view('backend.blog.index',compact('blogs'));
+        return view('front_end.user_details.index',compact('blogs','keyword','blog_common','categorys'));
+
+
     }
 
     public function show($id)
@@ -56,13 +62,19 @@ class UserPostController extends Controller
         $blogs = $this->UserPostRepository->create($data);
         $blogs->user_id =  Auth::user()->id;
         $blogs->save();
-        return redirect()->route('UserPost.index')->with('message', 'Create success ...!');
+
+        return redirect()->route('UserPost.index')->with('message', 'Đăng bài viết thành công ...!');
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $blogs = $this->userRepository->edits($id);
-        return view('backend.blog.edit',compact('blogs'));
+        $keyword = $request->key;
+        $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
+        $categorys = Category::all();
+        // return view('backend.blog.edit',compact('blogs'));
+        return view('front_end.information.index',compact('blogs','keyword','blog_common','categorys'));
+
     }
 
     public function update(Request $request, $id)
@@ -75,7 +87,7 @@ class UserPostController extends Controller
         $blogs = $this->userRepository->update($id, $data);
         $blogs->password = Hash::make($request->password);
         $blogs->save();
-        return redirect()->route('UserPost.edit',$id)->with('message', 'Edit Success ...!');
+        return redirect()->route('UserPost.edit',$id)->with('message', 'Cập nhật thành công ...!');
     }
 
     public function destroy($id)

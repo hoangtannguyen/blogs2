@@ -109,11 +109,10 @@
     }
 
     .page-item {
-        color: #2b2a2a;
-        margin: 0 5%;
+        margin: 0 3%;
     }
     .page-link {
-        font-size: 2.7vh;
+        font-size: 40px;
     }
 
     .all {

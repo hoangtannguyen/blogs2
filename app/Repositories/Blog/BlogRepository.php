@@ -5,7 +5,7 @@ use App\Repositories\Blog\BlogRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class BlogRepository extends BaseRepository 
+class BlogRepository extends BaseRepository
 // implements BlogRepositoryInterface
 {
     public function getModel()
@@ -20,7 +20,7 @@ class BlogRepository extends BaseRepository
 
     public function getUserPost()
     {
-        return $this->model->where('user_id',Auth::user()->id)->get();
+        return $this->model->where('user_id',Auth::user()->id)->orderBy('created_at', 'desc')->paginate(5);
     }
 
 }

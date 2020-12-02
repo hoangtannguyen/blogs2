@@ -127,6 +127,10 @@ html, body {
   color: #0e0b0b;
 }
 
+.user-details {
+  width: 500px;
+}
+
 .user-textarea {
   width: 90%;
   background: transparent;
@@ -174,6 +178,30 @@ html, body {
   color: #fff;
 }
 
+.banner-user {
+  width: 91%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#585555), to(#f1e74e));
+  background-image: linear-gradient(to right, #585555, #f1e74e);
+  color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+.success-user {
+  width: 91%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#eebb14), to(#3df10f));
+  background-image: linear-gradient(to right, #eebb14, #3df10f);
+  color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+.user-created_at {
+  padding: 10px 0 0;
+}
+
 .header-text-title {
   font-size: 27px;
   font-weight: 950;
@@ -181,7 +209,7 @@ html, body {
 
 .header-text-description {
   line-height: 1.5;
-  padding: 20px 0;
+  padding: 6px 0;
   font-size: 3vh;
 }
 
@@ -775,6 +803,10 @@ center {
   padding: 0 30px;
 }
 
+.ul-title li a {
+  white-space: nowrap;
+}
+
 .ul-title li a:after {
   content: "/";
   color: #444444;
@@ -1005,6 +1037,9 @@ input:focus {
 }
 
 @media only screen and (max-width: 900px) {
+  .user-details {
+    width: 98%;
+  }
   .header-text-description {
     padding: 6px 0;
   }

@@ -63,18 +63,18 @@
             </ul>
         </li>
         @if (Auth::check())
-         <li class="dropdown" ><a href="">
-            <img src="{{ Auth::user()->image }}" style="width:20px;height:20px;border-radius:50%"></a>
+         <li class="dropdown" >
+            <a href="#"><img src="{{ Auth::user()->image }}" style="width:30px;height:30px;border-radius:50%"></a>
             <i class='fas fa-address-book'></i>
             <ul class="dropdown-1">
                 <div class="ul-title ul-title-one">
-                    <li ><a href="">Thông tin của bạn</a></li>
-                    <li ><a href="">Xin chào : {{ Auth::user()->name }}</a></li>
+                    <li ><a href="{{ route('UserPost.edit',Auth::user()->id) }}">Thông tin</a></li>
+                    <li ><a href="#"><i class="fa fa-user"></i>  {{ Auth::user()->name }}</a></li>
                 </div>
                 <div class="dropdown-grid">
                 <div>
                     <li>
-                    <a href=""><img style="width: 150px;border-radius:50%" src="{{ Auth::user()->image }}" alt=""></a>
+                    <a href=""><img style="width: 150px" src="{{ Auth::user()->image }}" alt=""></a>
                         <div class="title-down">
                         </div>
                         <div class="title-date">
@@ -84,13 +84,13 @@
                 <div>
                     <li>
                         <div class="title-user">
-                            <a href="{{ route('logout')}}">Ảnh của bạn</a>
+                            <a href="{{ route('UserPost.index')}}">Bài viết</a>
                         </div>
                         <div class="title-user">
-                            <a href="{{ route('index.user_post')}}">Đăng ảnh</a>
+                            <a href="{{ route('index.user_post')}}">Đăng bài viết</a>
                         </div>
                         <div class="title-user">
-                            <a href="{{ route('logout')}}">Đăng xuất</a>
+                            <a href="{{ route('logout')}}">Thoát</a>
                         </div>
                     </li>
                 </div>
