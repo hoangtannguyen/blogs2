@@ -23,7 +23,7 @@
                Tham gia từ ngày : {{Auth::user()->created_at}}
             </div>
             <div>
-                Số ảnh đã đăng :  ({{$blogs->total()}})
+                Số bài viết đã đăng :  ({{$blogs->total()}})
             </div>
             <div>
                 Được xem : ({{ $chuck }}) lần
