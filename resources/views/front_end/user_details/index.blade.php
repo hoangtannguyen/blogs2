@@ -26,7 +26,7 @@
                 Số ảnh đã đăng :  ({{$blogs->total()}})
             </div>
             <div>
-                Được xem : (0) lần
+                Được xem : ({{ $chuck }}) lần
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 @include('front_end.index.layout.header')
 </head>
 <body>
-    
+
 @include('front_end.index.layout.banner')
 
 <section class="banner-unit" id="dx-modal" >
@@ -31,7 +31,7 @@
     </div>
     <div class="banner-like">
         <div class="banner-comment">
-            Comment   
+            Comment
         </div>
         <div class="fb-like" data-href="{{ route('index.details',$blogs->id) }}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
     </div>

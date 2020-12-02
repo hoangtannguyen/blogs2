@@ -34,8 +34,10 @@ class UserPostController extends Controller
         $keyword = $request->key;
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $categorys = Category::all();
+
+        $chuck = Blog::where('user_id',Auth::user()->id)->sum('view');
         // return view('backend.blog.index',compact('blogs'));
-        return view('front_end.user_details.index',compact('blogs','keyword','blog_common','categorys'));
+        return view('front_end.user_details.index',compact('blogs','keyword','blog_common','categorys','chuck'));
 
 
     }
@@ -100,7 +102,6 @@ class UserPostController extends Controller
         $keyword = $request->key;
         $blog_common = Blog::orderBy('created_at', 'desc')->paginate(3);
         $categorys = Category::all();
-
         return view('front_end.user_post.index',compact('keyword','blog_common','categorys'));
     }
 }
