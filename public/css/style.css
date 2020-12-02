@@ -287,6 +287,10 @@ header ul li {
   padding: 15px;
 }
 
+header ul li:hover {
+  background-color: #f72d2d;
+}
+
 header ul a {
   text-decoration: none;
   color: white;
@@ -805,28 +809,6 @@ center {
   padding: 5px;
 }
 
-.ul-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 30px;
-}
-
-.ul-title li a {
-  white-space: nowrap;
-}
-
-.ul-title li a:after {
-  content: "/";
-  color: #444444;
-  font-size: 20px;
-  margin-left: 35px;
-}
-
-.title-user {
-  padding: 15px 0 10px;
-}
-
 .ul-title-one:before {
   position: absolute;
   height: 15px;
@@ -866,6 +848,28 @@ center {
   background-color: #000;
 }
 
+.dropdown-2 {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  display: none;
+  top: 50px;
+  right: -55%;
+  overflow: hidden;
+}
+
+.dropdown-2 div {
+  background-color: #000;
+}
+
+.dropdown:hover .dropdown-2 {
+  display: block;
+}
+
 .dropdown:hover .dropdown-1 {
   display: block;
 }
@@ -873,14 +877,43 @@ center {
 .dropdown-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   padding: 0 10px;
 }
 
 .dropdown-grid div li img {
   width: 200px;
   height: 150px;
+}
+
+.dropdown-grid-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title-user {
+  padding: 10px 0 0;
+  white-space: nowrap;
+}
+
+.ul-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+
+.ul-title li a {
+  white-space: nowrap;
+}
+
+.ul-title li a:after {
+  content: "/";
+  color: #444444;
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 .dropdown-title {
@@ -898,15 +931,6 @@ center {
 
 .dropdown-1 li:hover .dropdown-2 {
   display: block;
-}
-
-.dropdown-2 {
-  position: absolute;
-  left: 93.4%;
-  width: 150px;
-  display: none;
-  -webkit-transform: skewX(0deg);
-          transform: skewX(0deg);
 }
 
 .ul-enty {
@@ -1039,13 +1063,18 @@ footer {
   .li-login {
     display: block;
   }
-}
-
-input:focus {
-  outline: none;
+  input:focus {
+    outline: none;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  .baner-all a {
+    margin-left: 18%;
+  }
+  .dropdown-2 {
+    right: -45.5%;
+  }
   .user-details {
     width: 98%;
   }

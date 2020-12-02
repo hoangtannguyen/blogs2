@@ -66,20 +66,16 @@
          <li class="dropdown" >
             <a href="#"><img src="{{ Auth::user()->image }}" style="width:30px;height:30px;border-radius:50%"></a>
             <i class='fas fa-address-book'></i>
-            <ul class="dropdown-1">
+            <ul class="dropdown-2">
                 <div class="ul-title ul-title-one">
                     <li ><a href="{{ route('UserPost.edit',Auth::user()->id) }}"> Thông tin</a></li>
                     <li ><a href="#"><i class="fa fa-user"></i>  {{ Auth::user()->name }}</a></li>
                     <li ><a href="{{ route('blog.view') }}"><i class="fa fa-user"></i> Admin</a></li>
                 </div>
-                <div class="dropdown-grid">
+                <div class="dropdown-grid-2">
                 <div>
                     <li>
                     <a href="{{ route('UserPost.edit',Auth::user()->id) }}"><img style="width: 150px" src="{{ Auth::user()->image }}" alt=""></a>
-                        <div class="title-down">
-                        </div>
-                        <div class="title-date">
-                        </div>
                     </li>
                 </div>
                 <div>
