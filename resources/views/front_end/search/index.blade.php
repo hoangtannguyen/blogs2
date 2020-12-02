@@ -10,7 +10,7 @@
 <section class="banner-unit" id="dx-modal" >
 <div>
     <div class="banner-new">
-        LATEST SEARCH : {{count($blogs)}} <br>
+        LATEST SEARCH : ({{count($blogs)}}) <br>
         Tìm kiếm : {{$keyword}}
     </div>
 
