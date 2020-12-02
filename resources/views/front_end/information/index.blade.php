@@ -12,7 +12,7 @@
 
 <section class="banner-unit" id="dx-modal" >
 
-<div class="user-post-all user-details">
+<div class="user-details">
 
     <div class="banner-new">
         Thông tin cá nhân
