@@ -3,7 +3,7 @@ let RoleUser = {} || RoleUser;
 RoleUser.index = function(){
     $.ajax({
         method: "GET",
-        url: "/role_user/index/",
+        url: "/role_user/index",
         success: function(response){
                 $("#role_userTable").empty();
              $.each(response.data, function(index,value){
@@ -21,7 +21,7 @@ RoleUser.index = function(){
                         </td>
                         <td>
                                 <a  href="#" class="btn btn-info btn-sm" onclick="RoleUser.edit(${value["id"]})">
-                                            <i class="fas fa-pencil-alt"></i>      
+                                            <i class="fas fa-pencil-alt"></i>
                                             Edit
                                 </a>
 
@@ -29,7 +29,7 @@ RoleUser.index = function(){
                                             <i class='fas fa-trash-alt'></i>
                                             Delete
                                 </a>
-                        </td>                                       
+                        </td>
                     </tr>
                 `)
             });
@@ -41,7 +41,7 @@ RoleUser.index = function(){
 RoleUser.create = function(){
 
     $.ajax({
-        url: "/role_user/create/",
+        url: "/role_user/create",
         method: "GET",
         dataType: "json",
         success: function(data){
@@ -83,7 +83,7 @@ RoleUser.edit = function(id) {
         dataType: "json",
         success: function(data){
             $("#role_id").empty().append(`<option value=''>Choose ...</option>`);
-            $.each(data.role,function(i,v){ 
+            $.each(data.role,function(i,v){
                 $("#role_id").append(
                     `
                         <option  value='${v.id}' ${v.id==data.role_id ?'selected':""}>${v.name}</option>
@@ -91,7 +91,7 @@ RoleUser.edit = function(id) {
                 );
             });
             $("#user_id").empty().append(`<option value=''>Choose ...</option>`);
-            $.each(data.user,function(i,v){ 
+            $.each(data.user,function(i,v){
                 $("#user_id").append(
                     `
                         <option  value='${v.id}' ${v.id==data.user_id ?'selected':""}>${v.name}</option>
@@ -106,7 +106,7 @@ RoleUser.edit = function(id) {
                 if( i != 'image'){
                 $(`#fs-modal input[id=${i}]`).val(v);
             }
-        });    
+        });
         $('#fs-modal #fs-modal-title').text("Edit User");
         $('#fs-modal').modal('show');
         $('#fs-modal #btn-save').data('id', Obj.id);
@@ -124,7 +124,7 @@ RoleUser.save = function(){
             ruObj.role_id = $('#role_id').val();
             $.ajax({
                 method: "POST",
-                url: "/role_user/post/",            
+                url: "/role_user/post",
                 contentType : "application/json",
                 data : JSON.stringify(ruObj),
                 success : function(data){
@@ -172,9 +172,9 @@ RoleUser.destroy = function(id) {
       .then((willDelete) => {
         if (willDelete) {
           $.ajax({
-            url: "/role_user/delete/"+ id +"/",
+            url: "/role_user/delete/"+ id ,
             method: 'POST',
-            success: function() {   
+            success: function() {
                 RoleUser.index();
                 swal("Poof! Your imaginary file has been deleted!", {
                     icon: "success",
@@ -206,7 +206,7 @@ RoleUser.destroy = function(id) {
 
 RoleUser.errors = function(errors) {
     if (errors.status == 422) {
-        let msg = errors.responseJSON.errors;   
+        let msg = errors.responseJSON.errors;
         $(`#fs-modal .is-invalid`).removeClass('is-invalid');
         $(`#fs-modal .is-valid`).removeClass('is-valid');
         $(`#fs-modal .field`).addClass('is-valid');

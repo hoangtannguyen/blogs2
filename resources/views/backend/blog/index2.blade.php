@@ -32,7 +32,7 @@
                 </div>
               </div>
               <div class="card-body">
-                <table id="bl_table" class="table table-bordered table-striped">
+                <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th># ID</th>
