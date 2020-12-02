@@ -399,6 +399,10 @@ a {
   font-size: 20px;
 }
 
+.user-post-all {
+  width: 550px;
+}
+
 .input-post-padding {
   padding: 10px 0;
 }
@@ -1038,6 +1042,9 @@ input:focus {
 
 @media only screen and (max-width: 900px) {
   .user-details {
+    width: 98%;
+  }
+  .user-post-all {
     width: 98%;
   }
   .header-text-description {
