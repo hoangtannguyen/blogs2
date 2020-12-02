@@ -902,7 +902,7 @@ center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10px;
+  padding: 0 5px 0 17px;
 }
 
 .ul-title li a {
@@ -910,10 +910,11 @@ center {
 }
 
 .ul-title li a:after {
+  position: relative;
   content: "/";
   color: #444444;
   font-size: 20px;
-  margin-left: 5px;
+  left: 15px;
 }
 
 .dropdown-title {
@@ -1073,7 +1074,7 @@ footer {
     margin-left: 18%;
   }
   .dropdown-2 {
-    right: -45.5%;
+    right: -40.5%;
   }
   .user-details {
     width: 98%;
