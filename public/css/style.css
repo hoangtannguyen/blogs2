@@ -399,6 +399,11 @@ a {
   font-size: 20px;
 }
 
+.user-details label {
+  color: #fff;
+  font-size: 20px;
+}
+
 .user-post-all {
   width: 550px;
 }
