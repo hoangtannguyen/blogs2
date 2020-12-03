@@ -5,6 +5,7 @@
     <div class="trending-input">
         <form id="contact-input" action="{{route('index.contact')}}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('POST')
             <div class="title-email">
                 Tên
             </div>
